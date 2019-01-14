@@ -9,6 +9,10 @@ class Solution(object):
         if length < 1:
             return length
         
+        # Considering the order of elements could be changed,
+        # We scan the list from the tail and replace the element
+        # which contains desired value with the element at tail.
+        # Then we cut off that old tail.
         new_end = length - 1;
         for cnt in range(length-1, -1, -1):
             if nums[cnt] == val:
