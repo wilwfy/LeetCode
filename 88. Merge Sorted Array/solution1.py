@@ -3,19 +3,16 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        for i in range(len(nums2)):
-            nums1[m+i] = nums2[i]
+        index2 = 0
+        for index1 in range(m+n):
+            if (index2 < n) and (nums2[index2] <= nums1[index1]):
+                nums1.insert(index1, nums2[index2])
+                nums1.pop()  # Remove rightmost element
+                index2 += 1
+        # Copy remaining elements of nums2 to the tail of nums1
+        if index2 < n:
+            nums1[m+index2:m+n] = nums2[index2:n]
 
-        for i in range(m, m+n):
-            for j in range(i, 0, -1):
-                if j == 0:
-                    break
-                if nums1[j] <= nums1[j - 1]:
-                    tmp = nums1[j-1]
-                    nums1[j-1] = nums1[j]
-                    nums1[j] = tmp
-                else:
-                    break
                     
 def main():
     solution = Solution()
