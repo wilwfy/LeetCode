@@ -31,3 +31,11 @@ class Solution:
             current_node.next = ListNode(1)
         return dummy_node.next
 
+# There's no null in Python, instead there's None.
+# And use 'is None' to test if a variable/object is assigned with a value other than None.
+# Example:
+# >>> foo is None
+# True
+# >>> foo = 'bar' 
+# >>> foo is None
+# False
