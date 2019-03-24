@@ -19,7 +19,7 @@ Example 4:
 Input: 1234567891
 Output: "One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One"
 
-####################################################################################################
+######################################################
 
 Hint 1
 Did you see a pattern in dividing the number into chunk of words? For example, 123 and 123000.
