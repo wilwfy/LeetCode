@@ -17,7 +17,7 @@ class Solution:
         return com_pref
 
 ########################
-# Divide and quanqer
+# Divide-and-conquer
 # But result in error of Python recursion limit
 ########################
 class Solution:
