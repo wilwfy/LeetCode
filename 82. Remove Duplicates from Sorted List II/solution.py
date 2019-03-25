@@ -39,3 +39,50 @@ class Solution:
             else:
                 pre.next = cur.next
         return head
+
+
+####################
+# Other's solution 1
+####################
+class Solution:
+    def deleteDuplicates(self, head):
+        dummy = pre = ListNode(0)
+        dummy.next = head
+        while head and head.next:
+            if head.val == head.next.val:
+                while head and head.next and head.val == head.next.val:
+                    head = head.next
+                head = head.next
+                pre.next = head
+            else:
+                pre = pre.next
+                head = head.next
+        return dummy.next
+
+
+####################
+# Other's solution 2
+####################
+class Solution:
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        
+        dummy = ListNode(0);  # construct a dummy node
+        dummy.next = head 
+
+        pre = dummy           # set up pre and cur pointers
+        cur = head
+        while cur:
+            if cur.next and cur.val == cur.next.val:
+                # loop until cur point to the last duplicates
+                while cur and cur.next and cur.val == cur.next.val:
+                    cur = cur.next
+                pre.next = cur.next  # propose the next for pre
+                                     # this will be verified by next line
+            else:
+                pre = pre.next 
+            cur = cur.next
+        return dummy.next
