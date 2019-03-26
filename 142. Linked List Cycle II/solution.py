@@ -24,3 +24,11 @@ class Solution(object):
                 dict[cur.next] = 1
             cur = cur.next
         return None
+
+    
+##################################
+# A solution without using extra space based on two pointers
+# can solve this problem by using Floyd's algorithm.
+# This approach is explained in the video below:
+# https://www.youtube.com/watch?time_continue=2&v=zbozWoMgKW0
+##################################
