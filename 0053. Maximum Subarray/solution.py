@@ -1,3 +1,4 @@
+##################################################################
 # Solution from other people
 # It uses a dynamic programming method explained in this video:
 # https://www.youtube.com/watch?v=2MmGzdiKR9Y
@@ -5,6 +6,7 @@
 # you suppose if the maximum subarray is ended there, then which
 # would be a better choice to just keep current new item or to
 # include the previous solution which has been previously made.
+##################################################################
 class Solution:
     def maxSubArray(self, nums: 'List[int]') -> 'int':
         max_sum = cur_sum = nums[0]
@@ -14,7 +16,9 @@ class Solution:
         return max_sum
 
 
+##################################################################
 # Brute force solution
+##################################################################
 class Solution:
     def maxSubArray(self, nums: 'List[int]') -> 'int':
         max = nums[0]
