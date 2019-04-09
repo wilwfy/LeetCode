@@ -10,20 +10,13 @@ class Solution {
         int len = 0, center = 0;
         for (char c: map.keySet()) {
             int cnt = map.get(c);
-            //System.out.println(c + ": " + cnt);
-            if ((cnt == 1) && (center == 0)) {
+            if ((cnt % 2) == 1) {
                 center = 1;
-                continue;
+                cnt--;
             }
-            if (cnt >= 2) {
-                if ((cnt % 2) == 1) {
-                    if (center == 0) center = 1;
-                    len = len + cnt - 1;
-                } else {
-                    len = len + cnt;
-                }
-            }
+            len += cnt;
         }
         return len + center;
     }
 }
+
