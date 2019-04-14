@@ -9,6 +9,10 @@ Python Tips:
 3. For Linked List problem, using/creating a dummy head is usually needed.
 4. For Linked List problem, the middle element of a list can be found by using a slow and a fast pointers together.
 
+Java Tips:
+1. An implementation of Trie can be found in 720. Longest Word in Dictionary
+
+
 Heuristic Solutions:
 14. Longest Common Prefix
 53. Maximum Subarray
