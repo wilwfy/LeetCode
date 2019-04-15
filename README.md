@@ -10,7 +10,11 @@ Python Tips:
 4. For Linked List problem, the middle element of a list can be found by using a slow and a fast pointers together.
 
 Java Tips:
+
+
+Data Structure Implementation:
 1. An implementation of Trie can be found in 720. Longest Word in Dictionary
+2. An implementation of Max Heap can be found in 692. Top K Frequent Words
 
 
 Heuristic Solutions:
