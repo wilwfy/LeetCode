@@ -10,7 +10,8 @@ Python Tips:
 4. For Linked List problem, the middle element of a list can be found by using a slow and a fast pointers together.
 
 Java Tips:
-
+1. The ASCII values of '`' = 96, 'a' = 97, 'z' = 122, '{' = 123.
+   The full ASCII table can be found at: https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
 
 Data Structure Implementation:
 1. An implementation of Trie can be found in 720. Longest Word in Dictionary
