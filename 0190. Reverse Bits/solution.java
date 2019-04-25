@@ -17,3 +17,21 @@ public class Solution {
         return (sign > 0) ? res : res + 1;
     }
 }
+
+
+/*
+ * Other's solution
+ */
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+        int result = 0;
+        for (int i = 0;i<32;i++){
+            int end = n & 1;
+            n >>= 1;
+            result <<=1;
+            result |= end;
+        }
+        return result;
+    }
+}
