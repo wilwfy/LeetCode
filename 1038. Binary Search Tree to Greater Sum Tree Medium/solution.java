@@ -30,3 +30,25 @@ class Solution {
 }
 
 
+/*
+ * Other's solution
+ *
+ * We need to do the work from biggest to smallest, right to left.
+ * pre will record the previous value the we get, which the total sum of bigger values.
+ * For each node, we update root.val with root.val + pre.
+ */
+class Solution {
+    public TreeNode bstToGst(TreeNode root) {
+        if (root == null) return null;
+        helper(root, 0);
+        return root;
+    }
+    
+    int pre = 0;
+    public TreeNode bstToGst(TreeNode root) {
+        if (root.right != null) bstToGst(root.right);
+        pre = root.val = pre + root.val;
+        if (root.left != null) bstToGst(root.left);
+        return root;
+    }
+}
