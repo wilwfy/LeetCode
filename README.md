@@ -17,12 +17,24 @@ Data Structure Implementation:
 1. An implementation of Trie can be found in 720. Longest Word in Dictionary
 2. An implementation of Max Heap can be found in 692. Top K Frequent Words
 
+Dynamic Programming:
+1. the Math.max() and Math.min() are often used in Java solutions 
+
 
 Heuristic Solutions:
-14. Longest Common Prefix
-53. Maximum Subarray
-141. Linked List Cycle
-142. Linked List Cycle II
-160. Intersection of Two Linked Lists
-169. Majority Element
-234. Palindrome Linked List
+
+0014. Longest Common Prefix
+
+0053. Maximum Subarray
+
+0123. Best Time to Buy and Sell Stock III
+
+0141. Linked List Cycle
+
+0142. Linked List Cycle II
+
+0160. Intersection of Two Linked Lists
+
+0169. Majority Element
+
+0234. Palindrome Linked List
