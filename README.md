@@ -18,7 +18,9 @@ Data Structure Implementation:
 2. An implementation of Max Heap can be found in 692. Top K Frequent Words
 
 Dynamic Programming:
-1. the Math.max() and Math.min() are often used in Java solutions 
+1. the Math.max() and Math.min() are often used in Java solutions
+2. a local extremum (optimal) value is always used
+3. a matrix dp[i][j] is used to store result in most cases
 
 
 Heuristic Solutions:
