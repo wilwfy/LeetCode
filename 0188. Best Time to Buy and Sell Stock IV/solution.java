@@ -47,12 +47,20 @@ class Solution {
         
         int[][] dp = new int[k+1][n];
         for (int i = 1; i < k+1; i++) {
+            // To find the max profit for i th transaction on day j, we
+            // need use the total profit already obtained in i-1 th transaction
+            // on day j-1 to minus the cost of price on day j-1 as the 
+            // start point. The higher start point value, the higher profit.
+            // Here, we start from i-1 transaction on day j=0 for i transaction on day j=1.
             int localMax = dp[i-1][0] - prices[0];
             for (int j = 1; j < n; j++) {
+                // localMax always present the total profit already obtained
+                // in prevous i-1 transaction on previous j-1 day with a cost
+                // of price on previous j-1 day
                 dp[i][j] = Math.max(dp[i][j-1], localMax + prices[j]);
-                //System.out.println(dp[i][j]);
+                
+                // The start point is higher, the profit to be found is higher
                 localMax = Math.max(localMax, dp[i-1][j] - prices[j]);
-                //System.out.println("localMax = " + localMax);
             }
         }
         return dp[k][n-1];
