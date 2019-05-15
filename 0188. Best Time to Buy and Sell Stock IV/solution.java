@@ -6,6 +6,28 @@
  *          = max(dp[i, j-1], prices[j] + max(dp[i-1, jj] - prices[jj]))
  * dp[0, j] = 0; 0 transactions makes 0 profit
  * dp[i, 0] = 0; if there is only one price data point you can't make any transaction.
+ *
+ * Explanation:
+ * For example, if j == 8, then amongst all jj == 1,2,...,7
+ * The max profit could be one of the following:
+ * dp[i-1][0] + prices[8] - prices[0]
+ * dp[i-1][1] + prices[8] - prices[1]
+ * dp[i-1][2] + prices[8] - prices[2]
+ * ...
+ * dp[i-1][6] + prices[8] - prices[6]
+ * dp[i-1][7] + prices[8] - prices[7]
+ * 
+ * localMax is the max value amongst all:
+ * dp[i-1][0] - prices[0]
+ * dp[i-1][1] - prices[1]
+ * dp[i-1][2] - prices[2]
+ * ...
+ * dp[i-1][6] - prices[6]
+ * dp[i-1][7] - prices[7]
+ * 
+ * Then localMax + prices[8] is the max profit if we sell the stock at day 8.
+ * Then we compare this result with the max profit of not selling the stock 
+ * at day 8, take the max of the two.
  */
 class Solution {
     public int maxProfit(int k, int[] prices) {
