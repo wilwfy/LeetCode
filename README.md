@@ -45,3 +45,5 @@ Heuristic Solutions:
 0169. Majority Element
 
 0234. Palindrome Linked List
+
+0304. Range Sum Query 2D - Immutable
