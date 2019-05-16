@@ -17,6 +17,11 @@ Data Structure Implementation:
 1. An implementation of Trie can be found in 720. Longest Word in Dictionary
 2. An implementation of Max Heap can be found in 692. Top K Frequent Words
 
+
+Memoization:
+1. For a tree-like data structure, probably need a Hash table such as HashMap<TreeNode, Integer> to store the calculated values for Java implementation.
+
+
 Dynamic Programming:
 1. the Math.max() and Math.min() are often used in Java solutions
 2. a local extremum (optimal) value is always used
