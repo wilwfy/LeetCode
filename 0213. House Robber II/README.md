@@ -23,3 +23,7 @@ Output: 4
 Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 
              Total amount you can rob = 1 + 3 = 4.
+
+Hint:
+
+Since House[1] and House[n] are adjacent, they cannot be robbed together. Therefore, the problem becomes to rob either House[1]-House[n-1] or House[2]-House[n], depending on which choice offers more money. Now the problem has degenerated to the House Robber, which is already been solved.
