@@ -33,3 +33,33 @@ class NumMatrix {
         return sum;
     }
 }
+
+
+
+
+/*
+ * Official solution: Caching Smarter
+ * We could use the principle of inclusion-exclusion to calculate Sum(ABCD) as following:
+ * Sum(ABCD) = Sum(OD) - Sum(OB) - Sum(OC) + Sum(OA)
+ *
+ * Time complexity : O(1) time per query, O(mn) time pre-computation. The pre-computation
+ *                   in the constructor takes O(mn) time. Each sumRegion query takes O(1) time.
+ * Space complexity : O(mn). The algorithm uses O(mn) space to store the cumulative region sum.
+ */
+class NumMatrix {
+    private int[][] dp;
+    
+    public NumMatrix(int[][] matrix) {
+        if (matrix.length == 0 || matrix[0].length == 0) return;
+        dp = new int[matrix.length + 1][matrix[0].length + 1];
+        for (int r = 0; r < matrix.length; r++) {
+            for (int c = 0; c < matrix[0].length; c++) {
+                dp[r + 1][c + 1] = dp[r + 1][c] + dp[r][c + 1] + matrix[r][c] - dp[r][c];
+            }
+        }
+    }
+    
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        return dp[row2 + 1][col2 + 1] - dp[row1][col2 + 1] - dp[row2 + 1][col1] + dp[row1][col1];
+    }
+}
