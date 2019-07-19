@@ -48,3 +48,38 @@ class Solution {
     return helper(root, null, null);
   }
 }
+
+
+/**
+ * Solution by using Iteration
+ */
+class Solution {
+    private LinkedList<TreeNode> stack = new LinkedList<>();
+    private LinkedList<Integer> low = new LinkedList<>(),
+                                high = new LinkedList<>();
+    
+    public boolean isValidBST(TreeNode root) {
+        Integer low_limit = null, high_limit = null, val;
+        updateStack(root, low_limit, high_limit);
+        
+        while(!stack.isEmpty()){
+            root = stack.poll();
+            low_limit = low.poll();
+            high_limit = high.poll();
+            
+            if (root == null) continue;
+            val = root.val;
+            if ((low_limit != null) && (val <= low_limit)) return false;
+            if ((high_limit != null) && (val >= high_limit)) return false;
+            updateStack(root.right, val, high_limit);
+            updateStack(root.left, low_limit, val);
+        }
+        return true;
+    }
+    
+    public void updateStack(TreeNode node, Integer low_limit, Integer high_limit){
+        stack.add(node);
+        low.add(low_limit);
+        high.add(high_limit);
+    }
+}
