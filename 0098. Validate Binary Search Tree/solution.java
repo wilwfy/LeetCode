@@ -52,6 +52,9 @@ class Solution {
 
 /**
  * Solution by using Iteration
+ *
+ * Time complexity : O(N) since we visit each node exactly once.
+ * Space complexity : O(N) since we keep up to the entire tree. 
  */
 class Solution {
     private LinkedList<TreeNode> stack = new LinkedList<>();
@@ -87,8 +90,13 @@ class Solution {
 /**
  * Official Solution: Inorder traversal
  *
- * Time complexity : O(N) since we visit each node exactly once.
- * Space complexity : O(N) since we keep up to the entire tree.
+ * Left -> Node -> Right order of inorder traversal means for BST that each element should be smaller than the next one.
+ * Hence the algorithm with O(N) time complexity and O(N) space complexity could be simple:
+ *   - Compute inorder traversal list inorder.
+ *   - Check if each element in inorder is smaller than the next one.
+ *
+ * Time complexity : O(N) in the worst case when the tree is BST or the "bad" element is a rightmost leaf.
+ * Space complexity : O(N) to keep stack.
  */
 class Solution {
   public boolean isValidBST(TreeNode root) {
