@@ -83,3 +83,31 @@ class Solution {
         high.add(high_limit);
     }
 }
+
+/**
+ * Official Solution: Inorder traversal
+ *
+ * Time complexity : O(N) since we visit each node exactly once.
+ * Space complexity : O(N) since we keep up to the entire tree.
+ */
+class Solution {
+  public boolean isValidBST(TreeNode root) {
+    Stack<TreeNode> stack = new Stack();
+    double inorder = - Double.MAX_VALUE;
+
+    while (!stack.isEmpty() || root != null) {
+      while (root != null) {
+        stack.push(root);
+        root = root.left;
+      }
+      root = stack.pop();
+      // If next element in inorder traversal
+      // is smaller than the previous one
+      // that's not BST.
+      if (root.val <= inorder) return false;
+      inorder = root.val;
+      root = root.right;
+    }
+    return true;
+  }
+}
