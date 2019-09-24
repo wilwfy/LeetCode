@@ -27,6 +27,9 @@ Dynamic Programming:
 2. a local extremum (optimal) value is always used
 3. a matrix dp[i][j] is used to store result in most cases
 
+Using HashMap to reduce Time Complexity:
+
+0560. Subarray Sum Equals K
 
 Heuristic Solutions:
 
