@@ -1,5 +1,5 @@
 /**
- * Other's solution by using PioriotyQueue
+ * Other's solution by using Piorioty Queue
  *
  * Time Complexity: m*n log (m * n)
  */
