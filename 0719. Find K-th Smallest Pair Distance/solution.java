@@ -37,8 +37,10 @@ class Solution {
 /**
  * Solution by referring to other's solution of Binary Search + Sliding Window
  *
- * A very good discussion and explanation can be found at the post ''Approach the problem using the "trial and error" algorithm:
+ * A very good discussion and explanation can be found at the post "Approach the problem using the 'trial and error' algorithm":
  *    https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm
+ *
+ * Another post: https://www.geeksforgeeks.org/k-th-smallest-absolute-difference-two-elements-array/
  */
 class Solution {
     public int smallestDistancePair(int[] nums, int k) {
