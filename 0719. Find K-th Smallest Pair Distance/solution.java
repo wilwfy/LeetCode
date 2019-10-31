@@ -32,3 +32,32 @@ class Solution {
         return lo;
     }
 }
+
+
+/**
+ * Solution by referring to other's solution of Binary Search + Sliding Window
+ *
+ * A very good discussion and explanation can be found at the post ''Approach the problem using the "trial and error" algorithm:
+ *    https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm
+ */
+class Solution {
+    public int smallestDistancePair(int[] nums, int k) {
+        Arrays.sort(nums);
+        
+        int n = nums.length;
+        int lo = 0, hi = nums[n-1] - nums[0];
+        while (lo < hi) {
+            int count = 0;
+            int mi = (lo + hi) / 2;
+            for (int i = 0, j = 0; i < n; i++) {
+                while(j < n && (nums[j] - nums[i] <= mi)) j++;
+                count += j - i - 1;
+            }
+            if (count < k)
+                lo = mi + 1;
+            else
+                hi = mi;
+        }
+        return lo;
+    }
+}
