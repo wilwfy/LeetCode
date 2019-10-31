@@ -35,26 +35,25 @@ Dynamic Programming:
 2. a local extremum (optimal) value is always used
 3. a matrix dp[i][j] is used to store result in most cases
 
-Using HashMap to reduce Time Complexity:
-
+Using HashMap to reduce Time Complexity:  
 0560. Subarray Sum Equals K
+
+
+Good discussion and explanation:
+1. Approach the problem using the "trial and error" algorithm:  
+https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm
+2. Summary of solutions for problems "reducible" to LeetCode 378:  
+https://leetcode.com/problems/k-th-smallest-prime-fraction/discuss/115819/Summary-of-solutions-for-problems-%22reducible%22-to-LeetCode-378
+
 
 Heuristic Solutions:
 
-0014. Longest Common Prefix
-
-0053. Maximum Subarray
-
-0123. Best Time to Buy and Sell Stock III
-
-0141. Linked List Cycle
-
-0142. Linked List Cycle II
-
-0160. Intersection of Two Linked Lists
-
-0169. Majority Element
-
-0234. Palindrome Linked List
-
+0014. Longest Common Prefix  
+0053. Maximum Subarray 
+0123. Best Time to Buy and Sell Stock III 
+0141. Linked List Cycle 
+0142. Linked List Cycle II 
+0160. Intersection of Two Linked Lists 
+0169. Majority Element 
+0234. Palindrome Linked List 
 0304. Range Sum Query 2D - Immutable
