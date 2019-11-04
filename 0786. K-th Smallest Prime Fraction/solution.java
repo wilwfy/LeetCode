@@ -1,4 +1,12 @@
 /**
+ *
+ * A very nice and detailed explanation and conclusion on this type of problem:
+ *        'Summary of solutions for problems "reducible" to LeetCode 378' at link:
+ * https://leetcode.com/problems/k-th-smallest-prime-fraction/discuss/115819/Summary-of-solutions-for-problems-%22reducible%22-to-LeetCode-378
+ */
+
+
+/**
  * Referring to other's solution of Priority Queue
  * 
  * Reference Post: https://leetcode.com/problems/k-th-smallest-prime-fraction/discuss/115486/Java-AC-O(max(nk)-*-logn)-Short-Easy-PriorityQueue/116025
