@@ -29,3 +29,31 @@ class Solution {
     }
 }
 
+
+/**
+ * Solution of O(1) space approach
+ *
+ * Time complexity : O(N) where N represents the number of elements in the input array. We use one iteration to construct the array L,
+ *                   one to update the array answer.
+ * Space complexity : O(1) since don't use any additional array for our computations. The problem statement mentions that using the
+ *                   answer array doesn't add to the space complexity.
+ */
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] outProd = new int[n];
+        
+        outProd[0] = 1;
+        for (int i = 1; i < n; i++) {
+            outProd[i] = nums[i-1] * outProd[i-1];
+        }
+        
+        int rightProd = 1;
+        for (int i = n-1; i >= 0; i--) {
+            outProd[i] = outProd[i] * rightProd;
+            rightProd *= nums[i];
+        }
+        
+        return outProd;
+    }
+}
