@@ -17,3 +17,13 @@ Example 2:
 
 Input: [4,5,6,7,0,1,2]  
 Output: 0
+
+Hint 1:  
+Array was originally in ascending order. Now that the array is rotated, there would be a point in the array where there is a small deflection from the increasing sequence. eg. The array would be something like [4, 5, 6, 7, 0, 1, 2].
+
+Hint 2:  
+You can divide the search space into two and see which direction to go. Can you think of an algorithm which has O(logN) search complexity?
+
+Hint 3:  
+1. All the elements to the left of inflection point > first element of the array.
+2. All the elements to the right of inflection point < first element of the array.
