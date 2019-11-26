@@ -24,3 +24,33 @@ class Solution {
         }
     }
 }
+
+
+/**
+ * Other's solution without Backtracking
+ */
+class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (nums.length == 0) return res;
+        
+        Arrays.sort(nums);
+        
+        res.add(new ArrayList<Integer>());
+        
+        int size = 0;
+        for (int i = 0; i < nums.length; i++) {
+            // If we want to insert an element which is a dup, we can only
+            // insert it after the newly inserted elements from last step.
+            int start = (i > 0 && nums[i] == nums[i-1]) ? size : 0;
+            size = res.size();
+            //System.out.println("size = " + size);
+            for (int j = start; j < size; j++) {
+                List<Integer> subset = new ArrayList<Integer>(res.get(j));
+                subset.add(nums[i]);
+                res.add(subset);
+            }
+        }
+        return res;
+    }
+}
