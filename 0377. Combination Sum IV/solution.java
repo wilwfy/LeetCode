@@ -29,3 +29,27 @@ class Solution {
         }
     }
 }
+
+
+/**
+ * Recursive Solution, but Time Limit Exceeded
+ */
+class Solution {
+    public int combinationSum4(int[] nums, int target) {
+        if (nums.length == 0) return 0;
+
+        int count = 0;
+        if (target < 0)
+            return 0;
+        else if (target == 0) {
+            return 1;
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (target - nums[i] < 0) break;
+                
+                count += combinationSum4(nums, target - nums[i]);
+            }
+        }
+        return count;
+    }
+}
