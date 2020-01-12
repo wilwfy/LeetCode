@@ -19,6 +19,7 @@ class Solution {
             m--;
             n--;
         }
+        // now the curr is the m th element
 
         // The two pointers that will fix the final connections.
         ListNode con = prev, tail = cur;
@@ -32,8 +33,10 @@ class Solution {
             cur = third;
             n--;
         }
-
+        // now the prev is the n th element
+        
         // Adjust the final connections as explained in the algorithm
+        // if m = 1, then con = prev = null
         if (con != null) {
             con.next = prev;
         } else {
