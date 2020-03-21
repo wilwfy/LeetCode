@@ -75,3 +75,56 @@ class Solution {
         return A;
     }
 }
+
+
+/*
+ * Other's faster solutions
+ */
+class Solution {
+    // two pointer one pass inplace
+    public int[] sortArrayByParityII(int[] A) {
+        int i = 0, j = 1, n = A.length;
+        while (i < n && j < n) {
+            while (i < n && A[i] % 2 == 0) {
+                i += 2;
+            }
+            while (j < n && A[j] % 2 == 1) {
+                j += 2;
+            }
+            if (i < n && j < n) {
+                swap(A, i, j);
+            }
+        }
+        return A;
+    }
+    private void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
+    }
+}
+class Solution {
+    public int[] sortArrayByParityII(int[] A) {
+        int[] res = new int[A.length];
+        int j = 0, k = 1;
+        for (int i = 0; i < A.length; i++) {
+            if(A[i] % 2 == 0) {
+                res[j] = A[i];
+                j += 2;
+            } else {
+                res[k] = A[i];
+                k += 2;
+            }
+        }
+        return res;
+    }
+}
+public int[] sortArrayByParityII(int[] A) {
+    int[] res = new int[A.length];
+
+    for (int i = 0, j = -2, k = -1; i < A.length; i++) {
+        res[A[i] % 2 == 0 ? (j += 2) : (k += 2)] = A[i];
+    }
+
+    return res;
+}
