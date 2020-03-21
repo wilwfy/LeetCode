@@ -26,3 +26,20 @@ class Solution {
         return (T[0] + T[1] > T[2]) && (T[0] + T[2] > T[1]) && (T[1] + T[2] > T[0]);
     }
 }
+
+
+/*
+ * Official solution with Sort
+ *
+ * Time Complexity: O(NlogN), where N is the length of A.
+ * Space Complexity: O(1).
+ */
+class Solution {
+    public int largestPerimeter(int[] A) {
+        Arrays.sort(A);
+        for (int i = A.length - 3; i >= 0; --i)
+            if (A[i] + A[i+1] > A[i+2])
+                return A[i] + A[i+1] + A[i+2];
+        return 0;
+    }
+}
