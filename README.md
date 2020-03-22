@@ -18,13 +18,16 @@ Data Structure Implementation:
 2. An implementation of Max Heap can be found in 692. Top K Frequent Words
 
 
-Array Problems:
-1. Using 2 pointers.
+Array Problems:  
+1. Using 2 pointers.  
 2. Or using Priority Queue (Heap) if some kinds of ordering is required.
 
-Memoization:
+Memoization:  
 1. For a tree-like data structure, probably need a Hash table such as HashMap<TreeNode, Integer> to store the calculated values for Java implementation.
 
+Sorting:  
+1. If the number of data is not big and related to integer, could using Counting Sort for better Time Complexity.
+2. TreeMap is a choice when handle sorting of large number data.
 
 Binary Search:
 1. Use 'index space' as searching space in 1-dimension data like array
