@@ -30,3 +30,81 @@ class Solution {
         return res;
     }
 }
+
+
+/*
+ * Other's solution of BFS
+ */
+class Solution {
+    
+    static int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    
+    public int[][] allCellsDistOrder(int R, int C, int r0, int c0) {
+        
+        int[][] res = new int[R * C][2];
+        boolean[][] visited = new boolean[R][C];
+        Queue<int[]> q = new LinkedList<>();
+        
+        int i = 0;
+        res[i++] = new int[] {r0, c0};
+        q.add(new int[] {r0, c0});
+        visited[r0][c0] = true;
+        
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            int r = cur[0], c = cur[1];
+            
+            for (int[] dir : dirs) {
+                int x = r + dir[0];
+                int y = c + dir[1];
+                if (x < 0 || x >= R || y < 0 || y >= C || visited[x][y]) {
+                    continue;
+                }
+                res[i++] = new int[] {x, y};
+                visited[x][y] = true;
+                q.add(new int[] {x, y});
+            }
+        }
+        return res;
+    }
+}
+
+
+/*
+ * Other's solution of BFS
+ */
+class Solution {
+    
+    static int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    
+    public int[][] allCellsDistOrder(int R, int C, int r0, int c0) {
+        
+        int[][] res = new int[R * C][2];
+        boolean[][] visited = new boolean[R][C];
+        Queue<int[]> q = new LinkedList<>();
+        
+        int i = 0;
+        res[i++] = new int[] {r0, c0};
+        q.add(new int[] {r0, c0});
+        visited[r0][c0] = true;
+        
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            int r = cur[0], c = cur[1];
+            
+            for (int[] dir : dirs) {
+                int x = r + dir[0];
+                int y = c + dir[1];
+                if (x < 0 || x >= R || y < 0 || y >= C || visited[x][y]) {
+                    continue;
+                }
+                res[i++] = new int[] {x, y};
+                visited[x][y] = true;
+                q.add(new int[] {x, y});
+            }
+        }
+        return res;
+    }
+}
+
+
