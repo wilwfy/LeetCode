@@ -1,0 +1,6 @@
+Similiar solution with Comparator:
+
+0056. Merge Intervals
+0252. Meeting Rooms
+0253. Meeting Rooms II
+0435. Non-overlapping Intervals
