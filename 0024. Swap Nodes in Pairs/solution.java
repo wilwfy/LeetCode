@@ -1,10 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
+// The illustration of Diagrams:
+// https://leetcode.wang/leetCode-24-Swap-Nodes-in-Pairs.html
+
+/*
+ * Other's iteration solution
+ *
+ * Time: O(n)
+ * Space: O(1)
  */
 class Solution {
     public ListNode swapPairs(ListNode head) {
@@ -22,3 +23,26 @@ class Solution {
         return dummy.next;
     }
 }
+
+
+/*
+ * Other's recursion solution
+ */
+class Solution {
+    public ListNode swapPairs(ListNode head) {
+        if ((head == null) || (head.next == null)) return head;
+        ListNode node = head.next;
+        head.next = swapPairs(head.next.next);
+        node.next = head;
+        return node;
+    }
+}
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
