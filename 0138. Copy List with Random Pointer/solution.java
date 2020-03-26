@@ -53,6 +53,60 @@ class Solution {
     }
 }
 
+
+/*
+ * Other's solution based on HashMap
+ */
+class Solution {
+    public RandomListNode copyRandomList(RandomListNode head) {
+        if (head == null) return null;
+      
+        Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
+      
+        // loop 1. copy all the nodes
+        RandomListNode node = head;
+        while (node != null) {
+            map.put(node, new RandomListNode(node.label));
+            node = node.next;
+        }
+      
+        // loop 2. assign next and random pointers
+        node = head;
+        while (node != null) {
+            map.get(node).next = map.get(node.next);
+            map.get(node).random = map.get(node.random);
+            node = node.next;
+        }
+      
+        return map.get(head);
+    }
+}
+
+
+/*
+ * Other's recursion solution based on DFS
+ */
+public class Solution {
+    public RandomListNode copyRandomList(RandomListNode head) {
+        Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
+        return copyRandomList(head, map);
+    }
+    private RandomListNode copyRandomList(RandomListNode head, Map<RandomListNode, RandomListNode> map) {
+        if (head == null) {
+            return null;
+        }
+        if (map.containsKey(head)) {
+            return map.get(head);
+        }
+        RandomListNode newHead = new RandomListNode(head.label);
+        map.put(head, newHead);
+        newHead.next = copyRandomList(head.next, map);
+        newHead.random = copyRandomList(head.random, map);
+        
+        return newHead;
+        
+    }
+}
 /*
 // Definition for a Node.
 class Node {
