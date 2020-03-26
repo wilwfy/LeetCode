@@ -22,6 +22,9 @@ Array Problems:
 1. Using 2 pointers.  
 2. Or using Priority Queue (Heap) if some kinds of ordering is required.
 
+List Problems:
+1. Using two pointers (slow pointer and fast pointer) to locate the middle element of the list.
+
 Memoization:  
 1. For a tree-like data structure, probably need a Hash table such as HashMap<TreeNode, Integer> to store the calculated values for Java implementation.
 
