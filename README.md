@@ -21,6 +21,9 @@ Data Structure Implementation:
 Array Problems:  
 1. Using 2 pointers.  
 2. Or using Priority Queue (Heap) if some kinds of ordering is required.
+3. Regarding circular array, possible solution is:
+-- concatenate the array with its copy to get a new array with double length. But cost extra space.
+-- Or, use larger index range like 0 < i < 2n with mod operation i%n,  here the n is the length of array.
 
 List Problems:
 1. Using two pointers (slow pointer and fast pointer) to locate the middle element of the list.
