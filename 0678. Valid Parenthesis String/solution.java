@@ -19,8 +19,8 @@
  * Greedy algorithm is used here. We always want to use left brackets to balance the right one first as the * symbol is a wild card.
  * There is probably an O(1) space complexity but I think this is worth mentioning.
  *
- * Time: O(n)
- * Space: O(n)
+ * Time: O(N)
+ * Space: O(N)
  */
 class Solution {
     public boolean checkValidString(String s) {
@@ -48,3 +48,52 @@ class Solution {
         return leftChar.isEmpty();
     }
 }
+
+
+/*
+ * Official solution of Dynamic Programming
+ *
+ * Intuition and Algorithm
+ * Let dp[i][j] be true if and only if the interval s[i], s[i+1], ..., s[j] can be made valid. Then dp[i][j] is true only if:
+ * s[i] is '*', and the interval s[i+1], s[i+2], ..., s[j] can be made valid;
+ * or, s[i] can be made to be '(', and there is some k in [i+1, j] such that s[k] can be made to be ')', plus the two intervals
+ * cut by s[k] (s[i+1: k] and s[k+1: j+1]) can be made valid;
+ *
+ * Time Complexity: O(N^3), where NN is the length of the string. There are O(N^2) states corresponding to entries of dp, and we
+ *                  do an average of O(N) work on each state.
+ * Space Complexity: O(N^2), the space used to store intermediate results in dp.
+ */
+class Solution {
+    public boolean checkValidString(String s) {
+        int n = s.length();
+        if (n == 0) return true;
+        boolean[][] dp = new boolean[n][n];
+
+        for (int i = 0; i < n; i++) {
+            if (s.charAt(i) == '*') dp[i][i] = true;
+            if (i < n-1 &&
+                    (s.charAt(i) == '(' || s.charAt(i) == '*') &&
+                    (s.charAt(i+1) == ')' || s.charAt(i+1) == '*')) {
+                dp[i][i+1] = true;
+            }
+        }
+
+        for (int size = 2; size < n; size++) {
+            for (int i = 0; i + size < n; i++) {
+                if (s.charAt(i) == '*' && dp[i+1][i+size] == true) {
+                    dp[i][i+size] = true;
+                } else if (s.charAt(i) == '(' || s.charAt(i) == '*') {
+                    for (int k = i+1; k <= i+size; k++) {
+                        if ((s.charAt(k) == ')' || s.charAt(k) == '*') &&
+                                (k == i+1 || dp[i+1][k-1]) &&
+                                (k == i+size || dp[k+1][i+size])) {
+                            dp[i][i+size] = true;
+                        }
+                    }
+                }
+            }
+        }
+        return dp[0][n-1];
+    }
+}
+
