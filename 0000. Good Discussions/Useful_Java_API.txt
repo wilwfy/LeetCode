@@ -1,1 +1,4 @@
 Integer.bitCount(a)
+
+Generate a list based on the values of a HashMap:
+ArrayList(map.values())
