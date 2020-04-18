@@ -67,6 +67,90 @@ class Interval implements Comparable<Interval>{
     }
 }
 
+
+/**
+ * Other's solution with TreeMap
+ */
+class RangeModule {
+    TreeMap<Integer, Integer> intervals = new TreeMap<>();
+    
+    public void addRange(int left, int right) {
+        Integer start = intervals.floorKey(left);
+        Integer end = intervals.floorKey(right);
+        if(start != null && intervals.get(start) >= left){
+            left = start;
+        }
+        if(end != null && intervals.get(end) > right){
+            right = intervals.get(end);
+        }
+        intervals.put(left, right);
+       
+        intervals.subMap(left, false, right, true).clear();
+    }
+    
+    public boolean queryRange(int left, int right) {
+        Integer start = intervals.floorKey(left);
+        if(start == null) return false;
+        return intervals.get(start) >= right;
+    }
+    
+    public void removeRange(int left, int right) {
+        Integer start = intervals.floorKey(left);
+        Integer end = intervals.floorKey(right);
+
+        if(end != null && intervals.get(end) > right){
+            intervals.put(right, intervals.get(end));
+        }
+        if(start != null && intervals.get(start) > left){
+            intervals.put(start, left);
+        }
+        intervals.subMap(left, true, right, false).clear();
+    }
+}
+
+
+/**
+ * Other's solution with TreeMap
+ */
+class RangeModule {
+    private TreeMap<Integer, Integer> map = new TreeMap<>();
+
+    public void addRange(int left, int right) {
+        if (left >= right) return;
+        Integer start = map.floorKey(left);
+        if (start == null) start = map.ceilingKey(left);
+        while (start != null && start <= right) {
+            int end = map.get(start);
+            if (end >= left) {
+                map.remove(start);
+                if (start < left) left = start;
+                if (end > right) right = end;
+            }
+            start = map.ceilingKey(end);
+        }
+        map.put(left, right);
+    }
+
+    public boolean queryRange(int left, int right) {
+        Integer floor = map.floorKey(left);
+        return floor != null && map.get(floor) >= right;
+    }
+
+    public void removeRange(int left, int right) {
+        if (left >= right) return;
+        Integer start = map.floorKey(left);
+        if (start == null) start = map.ceilingKey(left);
+        while (start != null && start < right) {
+            int end = map.get(start);
+            if (end >= left) {
+                map.remove(start);
+                if (start < left) map.put(start, left);
+                if (end > right) map.put(right, end);
+            }
+            start = map.ceilingKey(end);
+        }
+    }
+}
 /**
  * Your RangeModule object will be instantiated and called as such:
  * RangeModule obj = new RangeModule();
