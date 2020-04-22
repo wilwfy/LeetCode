@@ -7,6 +7,10 @@
  * };
  */
 
+/*
+ * Time: O(m + n).  Worst case.
+ * Space: O(1)
+ */
 class Solution {
     public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
         List<Integer> dimensions = binaryMatrix.dimensions();
