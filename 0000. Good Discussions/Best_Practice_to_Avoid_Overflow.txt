@@ -1,0 +1,10 @@
+In Problem 0278. First Bad Version
+https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow
+================================================================================================================================
+Before this problem, I have always use
+    mid = (start + end) / 2;
+To get the middle value, but this can caused OVERFLOW !
+when start and end are all about INT_MAX , then (start+end) of course will be overflow !
+
+To avoid the problem we can use
+    mid = start + (end - start)/2;
