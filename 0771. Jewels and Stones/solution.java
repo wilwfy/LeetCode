@@ -37,3 +37,24 @@ class Solution {
         return count;
     }
 }
+
+
+/**
+ * Other's solution with Array
+ *
+ * But the performance of Time and Space are not better than the approach of HashSet according to LeetCode running result
+ *
+ * Time: O(J + S)
+ * Space: O(1). Array with constant length
+ */
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        int[] cnt = new int[128];
+        for (char c : S.toCharArray())
+            cnt[c]++;
+        int ans = 0;
+        for (char c : J.toCharArray())
+            ans += cnt[c];
+        return ans;
+    }
+}
