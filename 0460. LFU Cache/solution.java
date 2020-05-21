@@ -43,9 +43,12 @@ class LFUCache {
         
         // Now the key doesn't exist in vals
         if (vals.size() >= cap) {
-            int evit = lists.get(min).iterator().next();
-            lists.get(min).remove(evit);
-            vals.remove(evit);
+            int evict = lists.get(min).iterator().next();
+            // should evict the absolete data in all these 3 data structures,
+            // otherwise the memory leakage would occur
+            lists.get(min).remove(evict);
+            vals.remove(evict);
+            counts.remove(evict);
         }
         vals.put(key, value);
         counts.put(key, 1); // this is a new key
