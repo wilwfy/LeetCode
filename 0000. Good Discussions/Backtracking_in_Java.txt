@@ -1,3 +1,9 @@
+Other Tips:
+1) Could change the original matrix element to special character like '#' prior to the next recursion instead of creating a new visited matrix.
+
+=====================================================================================================================================
+
+
 https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
 
 A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partioning)
