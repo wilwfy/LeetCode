@@ -1,3 +1,6 @@
+// https://leetcode.com/discuss/interview-question/601965/First-Unique-Number-with-explanation
+// https://leetcode.com/discuss/interview-question/algorithms/124822/bloomberg-interview-question-find-first-unique-integer-in-a-stream
+
 /**
  * Other's solution with HashMap and Queue
  */
