@@ -16,7 +16,9 @@ Output: 200
 
 Explanation: 
 
-The graph looks like this:
+The graph looks like this:  
+
+![](https://github.com/wilwfy/LeetCode/blob/master/0787.%20Cheapest%20Flights%20Within%20K%20Stops/Cheapest%20Flights%20Within%20K%20Stops.png)  
 
 The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture.
 
@@ -33,7 +35,9 @@ Output: 500
 
 Explanation: 
 
-The graph looks like this:
+The graph looks like this:  
+
+![](https://github.com/wilwfy/LeetCode/blob/master/0787.%20Cheapest%20Flights%20Within%20K%20Stops/Cheapest%20Flights%20Within%20K%20Stops.png)  
 
 The cheapest price from city 0 to city 2 with at most 0 stop costs 500, as marked blue in the picture.
 
