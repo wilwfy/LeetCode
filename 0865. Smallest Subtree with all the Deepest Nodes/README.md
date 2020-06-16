@@ -16,7 +16,7 @@ Input: [3,5,1,6,2,0,8,null,null,7,4]
 Output: [2,7,4]  
 Explanation:
 
-![](https://github.com/wilwfy/LeetCode/commit/2e0cf7b4979823594c3995e4cf7a57cd7744c6ac#diff-b52dc8f7689bac74b74b3258bacc50a3)
+![](https://github.com/wilwfy/LeetCode/blob/master/0865.%20Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes/Smallest%20Subtree%20with%20all%20the%20Deepest%20Nodes.png)
 
 
 We return the node with value 2, colored in yellow in the diagram.  
