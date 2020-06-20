@@ -22,3 +22,10 @@ Output: ""
 
 1. 2 <= S.length <= 10^5
 2. S consists of lowercase English letters.
+
+
+**Hint 1**  
+Binary search for the length of the answer. (If there's an answer of length 10, then there are answers of length 9, 8, 7, ...)
+
+**Hint 2**  
+To check whether an answer of length K exists, we can use Rabin-Karp 's algorithm.
