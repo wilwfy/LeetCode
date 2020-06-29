@@ -1,4 +1,11 @@
 Integer.bitCount(a)
 
-Generate a list based on the values of a HashMap:
+// Generate a list based on the values of a HashMap:
 ArrayList(map.values())
+
+// Insert an element itemA to the head of a List listA:
+listA.add(0, itemA);
+
+// Insert an element itemA to the head of a String LinkedList listA:
+LinkedList<String> listA = new LinkedList<>(); // must declare listA as LinkedList not just List
+listA..addFirst(itemA);
