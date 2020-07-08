@@ -21,3 +21,4 @@ Output: 16
 
 Explanation: The perimeter is the 16 yellow stripes in the image below:
 
+![](https://github.com/wilwfy/LeetCode/blob/master/0463.%20Island%20Perimeter/island.png)
