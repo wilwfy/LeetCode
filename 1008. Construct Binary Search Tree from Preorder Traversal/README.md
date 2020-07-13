@@ -10,10 +10,11 @@ Return the root node of a binary **search** tree that matches the given preorder
 
 Input: [8,5,1,7,10,12]  
 Output: [8,5,10,1,7,null,12]  
-
+![](https://github.com/wilwfy/LeetCode/blob/master/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal/1008.%20Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal.png?raw=true)
  
 
-**Note:** 
+**Constraints:** 
 
-1. 1 <= preorder.length <= 100  
-2. The values of preorder are distinct.
+- 1 <= preorder.length <= 100  
+- 1 <= preorder[i] <= 10^8
+- The values of preorder are distinct.
