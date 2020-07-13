@@ -1,6 +1,10 @@
 
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
 
+More explanation for Problem 123:
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/135704/Detail-explanation-of-DP-solution
+
+
 Note: this is a repost of my original post here with updated solutions for this problem (714. Best Time to Buy and Sell Stock with Transaction Fee). If you are only looking for solutions, you can go directly to each section in part II -- Applications to specific cases.
 
 Up to this point, I believe you have finished the following series of stock problems:
