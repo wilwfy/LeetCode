@@ -2,7 +2,7 @@
  * My solution with Two Pointers
  *
  * Time: O(n)
- * Space: O(1)
+ * Space: O(n)
  */
 class Solution {
     public boolean isPalindrome(String s) {
@@ -26,5 +26,25 @@ class Solution {
             return true;
         else
             return false;
+    }
+}
+
+
+/**
+ * Other's solution with Two Pointers
+ *
+ * Time: O(n)
+ * Space: O(n)
+ */
+class Solution {
+    public boolean isPalindrome(String s) {
+        char[] c = s.toCharArray();
+        for (int i = 0, j = c.length - 1; i < j; ) {
+            if (!Character.isLetterOrDigit(c[i])) i++;
+            else if (!Character.isLetterOrDigit(c[j])) j--;
+            else if (Character.toLowerCase(c[i++]) != Character.toLowerCase(c[j--])) 
+                return false;
+        }
+        return true;
     }
 }
