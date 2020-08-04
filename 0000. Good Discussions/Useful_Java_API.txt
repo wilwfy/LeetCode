@@ -9,3 +9,7 @@ listA.add(0, itemA);
 // Insert an element itemA to the head of a String LinkedList listA:
 LinkedList<String> listA = new LinkedList<>(); // must declare listA as LinkedList not just List
 listA..addFirst(itemA);
+
+
+Character.isLetterOrDigit()
+Character.toLowerCase()
