@@ -12,7 +12,7 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
  
 
 **Example 1:**
-
+![994_example1_oranges](https://github.com/wilwfy/LeetCode/blob/master/0994.%20Rotting%20Oranges/994_example1_oranges.png)
 
 ```
 Input: [[2,1,1],[1,1,0],[0,1,1]]
@@ -22,7 +22,8 @@ Output: 4
 ```
 Input: [[2,1,1],[0,1,1],[1,0,1]]
 Output: -1
-Explanation:  The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+Explanation:  The orange in the bottom left corner (row 2, column 0) is never rotten,
+because rotting only happens 4-directionally.
 ```
 **Example 3:**
 ```
