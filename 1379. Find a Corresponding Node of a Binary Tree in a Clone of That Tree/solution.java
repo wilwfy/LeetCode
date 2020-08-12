@@ -1,7 +1,7 @@
 /**
  * My solution of Recursion
  *
- * Time: O(n)
+ * Time: O(n). Worst case that all the nodes in the tree has only left subtree or only right subtree.
  * Space: O(n). Recursion space. Worst case that all the nodes in the tree has only left subtree or only right subtree.
  */
 class Solution {
