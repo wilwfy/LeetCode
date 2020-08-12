@@ -2,14 +2,14 @@ Medium
 
 Given a binary tree, determine if it is a complete binary tree.
 
-**Definition of a complete binary tree from Wikipedia:**
+<ins>**Definition of a complete binary tree from [Wikipedia](http://en.wikipedia.org/wiki/Binary_tree#Types_of_binary_trees):**</ins>  
 In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
 
  
 
 **Example 1:**
 
-
+![958-complete-binary-tree-1](https://github.com/wilwfy/LeetCode/blob/master/0958.%20Check%20Completeness%20of%20a%20Binary%20Tree/958-complete-binary-tree-1.png)
 ```
 Input: [1,2,3,4,5,6]
 Output: true
@@ -18,7 +18,7 @@ and all nodes in the last level ({4, 5, 6}) are as far left as possible.
 ```
 **Example 2:**
 
-
+![958-complete-binary-tree-2](https://github.com/wilwfy/LeetCode/blob/master/0958.%20Check%20Completeness%20of%20a%20Binary%20Tree/958-complete-binary-tree-2.png)
 ```
 Input: [1,2,3,4,5,null,7]
 Output: false
