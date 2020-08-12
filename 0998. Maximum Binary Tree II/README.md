@@ -20,6 +20,7 @@ Return Construct(B).
 
 **Example 1:**
 
+![maximum-binary-tree-1-1](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-1-1.png) ![maximum-binary-tree-1-2](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-1-2.png)
 
 ```
 Input: root = [4,1,3,null,null,2], val = 5
@@ -28,6 +29,7 @@ Explanation: A = [1,4,2,3], B = [1,4,2,3,5]
 ```
 **Example 2:**
 
+![maximum-binary-tree-2-1](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-2-1.png) ![maximum-binary-tree-2-2](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-2-2.png)
 
 ```
 Input: root = [5,2,4,null,1], val = 3
@@ -36,6 +38,7 @@ Explanation: A = [2,1,5,4], B = [2,1,5,4,3]
 ```
 **Example 3:**
 
+![maximum-binary-tree-3-1](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-3-1.png) ![maximum-binary-tree-3-2](https://github.com/wilwfy/LeetCode/blob/master/0998.%20Maximum%20Binary%20Tree%20II/maximum-binary-tree-3-2.png)
 
 ```
 Input: root = [5,2,3,null,1], val = 4
