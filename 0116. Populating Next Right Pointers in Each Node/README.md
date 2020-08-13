@@ -23,7 +23,7 @@ Initially, all next pointers are set to NULL.
 
 **Example 1:**
 
-
+![116_sample](https://github.com/wilwfy/LeetCode/blob/master/0116.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node/116_sample.png)
 ```
 Input: root = [1,2,3,4,5,6,7]
 Output: [1,#,2,3,#,4,5,6,7,#]
