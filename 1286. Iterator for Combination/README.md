@@ -23,3 +23,9 @@ iterator.hasNext(); // returns false
 - 1 <= combinationLength <= characters.length <= 15
 - There will be at most 10^4 function calls per test.
 - It's guaranteed that all calls of the function next are valid.
+
+**Hint 1**  
+Generate all combinations as a preprocessing.
+
+**Hint 2**  
+Use bit masking to generate all the combinations.
