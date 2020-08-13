@@ -23,13 +23,13 @@ Initially, all next pointers are set to NULL.
 
 **Example 1:**
 
-
+![117_sample](https://github.com/wilwfy/LeetCode/blob/master/0117.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/117_sample.png)
 ```
 Input: root = [1,2,3,4,5,null,7]
 Output: [1,#,2,3,#,4,5,7,#]
-Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right 
-node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the
-end of each level.
+Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its
+next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers,
+with '#' signifying the end of each level.
 ``` 
 
 **Constraints:**
