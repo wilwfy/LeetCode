@@ -15,6 +15,8 @@ Output: true
 Explanation: We flipped at nodes with values 1, 3, and 5.
 Flipped Trees Diagram
 ```
+![951_tree_ex](https://github.com/wilwfy/LeetCode/blob/master/0951.%20Flip%20Equivalent%20Binary%20Trees/951_tree_ex.png)
+
 
 **Note:**
 
