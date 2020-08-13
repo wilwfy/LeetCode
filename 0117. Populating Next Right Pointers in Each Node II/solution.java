@@ -11,22 +11,22 @@ class Solution {
         Node head = root, tmpNode = new Node(0);
         //loop the head in the level
         while (head != null) {
-        	  //loop the current node in each level
-        	  Node cur = head, child = tmpNode; // head points to the first node at current level
-        	  while (cur != null) {
-        		    if (cur.left != null) {
-        			      child.next = cur.left; // Now tmpNode points to the first node at next level
-        			      child = cur.left;
-        		    }
-        		    if (cur.right != null) {
-        			      child.next = cur.right;
-        			      child = cur.right;
-        		    }
-        		    cur = cur.next; // move to the next node at current level
-        	  }
-        	  head = tmpNode.next; // Now head points to the first node at next level
-        	  tmpNode.next = null; // Reset the 'next' pointer of tmpNode
-		    }
+        	//loop the current node in each level
+        	Node cur = head, child = tmpNode; // head points to the first node at current level
+        	while (cur != null) {
+        		if (cur.left != null) {
+        			child.next = cur.left; // Now tmpNode points to the first node at next level
+        			child = cur.left;
+        		}
+        		if (cur.right != null) {
+        			child.next = cur.right;
+        			child = cur.right;
+        		}
+        		cur = cur.next; // move to the next node at current level
+        	}
+        	head = tmpNode.next; // Now head points to the first node at next level
+        	tmpNode.next = null; // Reset the 'next' pointer of tmpNode
+		}
         return root;
     }
 }
