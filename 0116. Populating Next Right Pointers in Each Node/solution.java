@@ -25,6 +25,57 @@ class Solution {
 }
 
 
+/**
+ * My solution of Recursion with constant extra space
+ *
+ * Time: O(n)
+ * Space: O(H). H is the height of the tree. The implicit stack space does not count as extra space for this problem.
+ */
+class Solution {
+    public Node connect(Node root) {
+        if (root == null) return root;
+        dfs(root.left, root.right);
+        dfs(root.right, null);
+        return root;
+    }
+    
+    private void dfs(Node node, Node nextNode) {
+        if (node == null) return;
+        
+        node.next = nextNode;
+        dfs(node.left, node.right);
+        if (nextNode != null)
+            dfs(node.right, nextNode.left);
+        else
+            dfs(node.right, null);
+    }
+}
+
+
+/**
+ * Other's solution of Iteration without extra space
+ *
+ * Time: O(n). Need walk through every node in the tree.
+ * Space: O(1).
+ */
+class Solution {
+    public Node connect(Node root) {
+        Node level_start = root;
+        while (level_start != null){
+            Node cur = level_start;
+            while (cur != null) {
+                if (cur.left != null) {
+                    cur.left.next = cur.right;
+                    if (cur.next != null) cur.right.next = cur.next.left; // we don't need to check for the right child
+                }
+                cur = cur.next;
+            }
+            level_start = level_start.left;
+        }
+        return root;
+    }
+}
+
 /*
 // Definition for a Node.
 class Node {
