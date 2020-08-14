@@ -8,7 +8,7 @@ The edges of the undirected tree are given in the array edges, where edges[i] = 
 
 **Example 1:**
 
-
+![1443_min_time_collect_apple_1](https://github.com/wilwfy/LeetCode/blob/master/1443.%20Minimum%20Time%20to%20Collect%20All%20Apples%20in%20a%20Tree/1443_min_time_collect_apple_1.png)
 ```
 Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,true,true,false]
 Output: 8 
@@ -17,7 +17,7 @@ is shown by the green arrows.
 ```
 **Example 2:**
 
-
+![1443_min_time_collect_apple_2](https://github.com/wilwfy/LeetCode/blob/master/1443.%20Minimum%20Time%20to%20Collect%20All%20Apples%20in%20a%20Tree/1443_min_time_collect_apple_2.png)
 ```
 Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,false,true,false]
 Output: 6
