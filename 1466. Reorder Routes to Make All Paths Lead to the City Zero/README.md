@@ -14,7 +14,7 @@ It's **guaranteed** that each city can reach the city 0 after reorder.
 
 **Example 1:**
 
-
+![1466_sample_1](https://github.com/wilwfy/LeetCode/blob/master/1466.%20Reorder%20Routes%20to%20Make%20All%20Paths%20Lead%20to%20the%20City%20Zero/1466_sample_1.png)
 ```
 Input: n = 6, connections = [[0,1],[1,3],[2,3],[4,0],[4,5]]
 Output: 3
@@ -22,7 +22,7 @@ Explanation: Change the direction of edges show in red such that each node can r
 ```
 **Example 2:**
 
-
+![1466_sample_2](https://github.com/wilwfy/LeetCode/blob/master/1466.%20Reorder%20Routes%20to%20Make%20All%20Paths%20Lead%20to%20the%20City%20Zero/1466_sample_2.png)
 ```
 Input: n = 5, connections = [[1,0],[1,2],[3,2],[3,4]]
 Output: 2
