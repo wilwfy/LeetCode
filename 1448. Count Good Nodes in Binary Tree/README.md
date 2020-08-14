@@ -8,7 +8,7 @@ Return the number of **good** nodes in the binary tree.
 
 **Example 1:**
 
-
+![1448_sample_1](https://github.com/wilwfy/LeetCode/blob/master/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree/1448_sample_1.png)
 ```
 Input: root = [3,1,4,3,null,1,5]
 Output: 4
@@ -20,7 +20,7 @@ Node 3 -> (3,1,3) is the maximum value in the path.
 ```
 **Example 2:**
 
-
+![1448_sample_2](https://github.com/wilwfy/LeetCode/blob/master/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree/1448_sample_2.png)
 ```
 Input: root = [3,3,null,4,2]
 Output: 3
