@@ -18,21 +18,21 @@ If we cannot do so, then return the list [-1].
 
 **Example 1:**
 
-
+![971_example_1](https://github.com/wilwfy/LeetCode/blob/master/0971.%20Flip%20Binary%20Tree%20To%20Match%20Preorder%20Traversal/971_example_1.png)
 ```
 Input: root = [1,2], voyage = [2,1]
 Output: [-1]
 ```
 **Example 2:**
 
-
+![971_example_2](https://github.com/wilwfy/LeetCode/blob/master/0971.%20Flip%20Binary%20Tree%20To%20Match%20Preorder%20Traversal/971_example_2.png)
 ```
 Input: root = [1,2,3], voyage = [1,3,2]
 Output: [1]
 ```
 **Example 3:**
 
-
+![971_example_3](https://github.com/wilwfy/LeetCode/blob/master/0971.%20Flip%20Binary%20Tree%20To%20Match%20Preorder%20Traversal/971_example_3.png)
 ```
 Input: root = [1,2,3], voyage = [1,2,3]
 Output: []
