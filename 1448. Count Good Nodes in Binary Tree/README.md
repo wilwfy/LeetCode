@@ -37,3 +37,6 @@ Explanation: Root is considered as good.
 
 - The number of nodes in the binary tree is in the range [1, 10^5].
 - Each node's value is between [-10^4, 10^4].
+
+**Hint 1**  
+Use DFS (Depth First Search) to traverse the tree, and constantly keep track of the current path maximum.
