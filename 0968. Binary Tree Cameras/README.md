@@ -10,6 +10,7 @@ Calculate the minimum number of cameras needed to monitor all nodes of the tree.
 
 **Example 1:**
 
+![968_bst_cameras_01](https://github.com/wilwfy/LeetCode/blob/master/0968.%20Binary%20Tree%20Cameras/968_bst_cameras_01.png)
 ```
 Input: [0,0,null,0,0]
 Output: 1
@@ -17,6 +18,7 @@ Explanation: One camera is enough to monitor all nodes if placed as shown.
 ```
 **Example 2:**
 
+![968_bst_cameras_02](https://github.com/wilwfy/LeetCode/blob/master/0968.%20Binary%20Tree%20Cameras/968_bst_cameras_02.png)
 ```
 Input: [0,0,null,0,null,0,null,null,0]
 Output: 2
