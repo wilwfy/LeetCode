@@ -16,3 +16,6 @@ Character.toLowerCase()
 
 // Build String with duplicated characters
 return "b" + "ab".substring(n % 2, 1 + n % 2).repeat(n - 1);
+
+// Compare two Strings in lexicographical order
+return leftStr.compareTo(rightStr) <= 0 ? leftStr : rightStr;
