@@ -45,3 +45,6 @@ Output: [1,null,-3,4]
 1. The given tree will have between 1 and 5000 nodes.
 2. -10^5 <= node.val <= 10^5
 3. -10^9 <= limit <= 10^9
+
+**Hint 1**  
+Consider a DFS traversal of the tree. You can keep track of the current path sum from root to this node, and you can also use DFS to return the minimum value of any path from this node to the leaf. This will tell you if this node is insufficient.
