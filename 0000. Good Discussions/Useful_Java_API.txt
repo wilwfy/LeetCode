@@ -13,3 +13,6 @@ listA..addFirst(itemA);
 
 Character.isLetterOrDigit()
 Character.toLowerCase()
+
+// Build String with duplicated characters
+return "b" + "ab".substring(n % 2, 1 + n % 2).repeat(n - 1);
