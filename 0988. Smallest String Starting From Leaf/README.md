@@ -10,21 +10,21 @@ Find the lexicographically smallest string that starts at a leaf of this tree an
 
 **Example 1:**
 
-
+![988_tree1](https://github.com/wilwfy/LeetCode/blob/master/0988.%20Smallest%20String%20Starting%20From%20Leaf/988_tree1.png)
 ```
 Input: [0,1,2,3,4,3,4]
 Output: "dba"
 ```
 **Example 2:**
 
-
+![988_tree2](https://github.com/wilwfy/LeetCode/blob/master/0988.%20Smallest%20String%20Starting%20From%20Leaf/988_tree2.png)
 ```
 Input: [25,1,3,1,3,0,2]
 Output: "adz"
 ```
 **Example 3:**
 
-
+![988_tree3](https://github.com/wilwfy/LeetCode/blob/master/0988.%20Smallest%20String%20Starting%20From%20Leaf/988_tree3.png)
 ```
 Input: [2,2,1,null,1,0,null,0]
 Output: "abc"
