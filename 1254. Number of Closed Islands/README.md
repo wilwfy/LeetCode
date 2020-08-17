@@ -8,7 +8,7 @@ Return the number of closed islands.
 
 **Example 1:**
 
-
+![1254_sample_1](https://github.com/wilwfy/LeetCode/blob/master/1254.%20Number%20of%20Closed%20Islands/1254_sample_1.png)
 ```
 Input: grid = [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
 Output: 2
@@ -17,7 +17,7 @@ Islands in gray are closed because they are completely surrounded by water (grou
 ```
 **Example 2:**
 
-
+![1254_sample_2](https://github.com/wilwfy/LeetCode/blob/master/1254.%20Number%20of%20Closed%20Islands/1254_sample_2.png)
 ```
 Input: grid = [[0,0,1,0,0],[0,1,0,1,0],[0,1,1,1,0]]
 Output: 1
