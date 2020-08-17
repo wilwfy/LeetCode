@@ -33,3 +33,12 @@ Output: [2,4,5]
 
 - The given tree will have between 1 and 1000 nodes.
 - Each node of the tree will have a distinct value between 1 and 1000.
+
+**Hint 1**  
+Do a postorder traversal.
+
+**Hint 2**  
+Then, if both subtrees contain a deepest leaf, you can mark this node as the answer (so far).
+
+**Hint 3**  
+The final node marked will be the correct answer.
