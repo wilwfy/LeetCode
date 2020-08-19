@@ -8,7 +8,7 @@
  * Each turn, for each x in cur,
  * we get its last digit y = x % 10.
  * If y + K < 10, we add x * 10 + y + K to the new list.
- * If y - K >= 10, we add x * 10 + y - K to the new list.
+ * If y - K >= 0, we add x * 10 + y - K to the new list.
  * 
  * We repeat this step N - 1 times and return the final result.
  * 
