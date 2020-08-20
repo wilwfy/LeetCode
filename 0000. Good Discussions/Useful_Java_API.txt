@@ -10,6 +10,10 @@ listA.add(0, itemA);
 LinkedList<String> listA = new LinkedList<>(); // must declare listA as LinkedList not just List
 listA..addFirst(itemA);
 
+// Initialize a HashSet with an array
+String[] wordlist;
+Set<String> words = new HashSet<>(Arrays.asList(wordlist));
+
 
 Character.isLetterOrDigit()
 Character.toLowerCase()
