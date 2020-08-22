@@ -8,7 +8,7 @@ Calling next() will return the next smallest number in the BST.
 
 **Example:**
 
-
+![173_bst-tree](https://github.com/wilwfy/LeetCode/blob/master/0173.%20Binary%20Search%20Tree%20Iterator/173_bst-tree.png)
 ```
 BSTIterator iterator = new BSTIterator(root);
 iterator.next();    // return 3
