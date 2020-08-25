@@ -104,6 +104,47 @@ class CBTInserter {
 
 
 /**
+ * Other's solution with List of flattened tree
+ *
+ * Algorithm
+ * Store tree nodes to a list self.tree in bfs order.
+ * Node tree[i] has left child tree[2 * i + 1] and right child tree[2 * i + 2]
+ * 
+ * So when insert the Nth node (0-indexed), we push it into the list.
+ * we can find its parent tree[(N - 1) / 2] directly.
+ */
+class CBTInserter {
+    List<TreeNode> treeList;
+    
+    public CBTInserter(TreeNode root) {
+        treeList = new ArrayList<>();
+        treeList.add(root);
+        for (int i = 0; i < treeList.size(); i++) {
+            TreeNode cur = treeList.get(i);
+            if (cur.left != null) treeList.add(cur.left);
+            if (cur.right != null) treeList.add(cur.right);
+        }
+    }
+
+    public int insert(int v) {
+        // Node treeList[i] has left child treeList[2 * i + 1] and right child treeList[2 * i + 2]
+        int N = treeList.size();
+        TreeNode node = new TreeNode(v);
+        treeList.add(node);
+        if (N % 2 == 1)
+            treeList.get((N - 1) / 2).left = node;
+        else
+            treeList.get((N - 1) / 2).right = node;
+        
+        return treeList.get((N - 1) / 2).val;
+    }
+
+    public TreeNode get_root() {
+        return treeList.get(0);
+    }
+}
+
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
