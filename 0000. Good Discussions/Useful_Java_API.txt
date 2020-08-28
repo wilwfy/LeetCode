@@ -1,5 +1,15 @@
+/********************* Integer *********************/
 Integer.bitCount(a)
 
+/********************* Character *********************/
+Character.isLetterOrDigit()
+Character.toLowerCase()
+
+/********************* Array *********************/
+// Initialize an array with an existing array
+int[] newArray = existedArray.clone();
+
+/********************* List *********************/
 // Generate a list based on the values of a HashMap:
 ArrayList(map.values())
 
@@ -10,14 +20,12 @@ listA.add(0, itemA);
 LinkedList<String> listA = new LinkedList<>(); // must declare listA as LinkedList not just List
 listA..addFirst(itemA);
 
+/********************* Set *********************/
 // Initialize a HashSet with an array
 String[] wordlist;
 Set<String> words = new HashSet<>(Arrays.asList(wordlist));
 
-
-Character.isLetterOrDigit()
-Character.toLowerCase()
-
+/********************* String *********************/
 // Build String with duplicated characters
 return "b" + "ab".substring(n % 2, 1 + n % 2).repeat(n - 1);
 
