@@ -2,6 +2,8 @@
  * Other's solution with Math.random()
  *
  * Diagram:  https://github.com/wilwfy/LeetCode/blob/master/0478.%20Generate%20Random%20Point%20in%20a%20Circle/478_solution.png
+ *
+ * The point is that we should not use x=rand(len)*cos(rand(degree)), we should use x=sqrt(rand(len))*cos(rand(degree)).
  */
 class Solution {
     double radius, x_center, y_center;
