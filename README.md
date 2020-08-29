@@ -47,6 +47,8 @@ Always try to optimize time complexity O(n^2) -> O(nlogn) or O(n) in most cases.
 **Bit Manipulation:**  
 Use Column Operation
 
+**Interval Problem:**
+Use TreeMap with its lowerKey() or floorKey() and higherKey() or ceilingKey()
 
 **Using HashMap to reduce Time Complexity:**  
 0560. Subarray Sum Equals K
