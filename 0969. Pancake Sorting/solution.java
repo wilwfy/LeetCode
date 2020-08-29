@@ -1,5 +1,5 @@
 /**
- * Other's solution of Next Max Value
+ * Other's solution of Bubble Sort
  *
  * Explanation
  * Find the index i of the next maximum number x with considering the condition permutation of [1,2,..., A.length]
