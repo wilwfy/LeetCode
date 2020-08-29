@@ -41,3 +41,9 @@ String wordDevowel = word.toLowerCase().replaceAll("[aeiou]", "#");
 
 // Remove character in StringBuilder at index, for example, the last index:
 sb.deleteCharAt(sb.length() - 1);
+
+/********************* Math *********************/
+Math.random() // returns a pseudorandom double type number whose value is in range of [0.0, 1.0)
+double degree = Math.random() * 2 * Math.PI;
+Math.cos(degree)
+Math.sin(degree)
