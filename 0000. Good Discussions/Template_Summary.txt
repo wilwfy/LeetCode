@@ -5,3 +5,9 @@ while (start + 1 < end)
 mid = start + (end - start) / 2
 A[mid] ==, <, >
 A[start], A[end] ? target
+
+//=================================
+Find Minimum in Rotated Sorted Array
+//=================================
+The search condition should use: First position <= Last Number
+(WRONG Condition: First position <= or < First Number)
