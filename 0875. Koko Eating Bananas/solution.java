@@ -46,9 +46,8 @@ class Solution {
  * Here you find another similar problem.
  * 774. Minimize Max Distance to Gas Station
  * 
- * 
  * Complexity
- * Time O(N + log(MaxP))
+ * Time O(N*log(MaxP))
  * Space O(1)
  */
 class Solution {
