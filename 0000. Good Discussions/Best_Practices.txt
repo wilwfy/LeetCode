@@ -1,3 +1,6 @@
+////////////////////////////////////////
+//  To_Avoid_Overflow
+////////////////////////////////////////
 In Problem 0278. First Bad Version
 https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow
 ================================================================================================================================
@@ -8,3 +11,13 @@ when start and end are all about INT_MAX , then (start+end) of course will be ov
 
 To avoid the problem we can use
     mid = start + (end - start)/2;
+
+
+////////////////////////////////////////
+//  Ceiling
+////////////////////////////////////////
+In Problem 0875. Koko Eating Bananas
+https://leetcode.com/problems/koko-eating-bananas/discuss/152324/C%2B%2BJavaPython-Binary-Search
+================================================================================================================================
+(p + m - 1) / m equal to ceil(p / m)
+
