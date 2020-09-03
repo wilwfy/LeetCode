@@ -48,3 +48,6 @@ Explanation:
 
 - 1 <= D <= weights.length <= 50000
 - 1 <= weights[i] <= 500
+
+**Hint 1**  
+Binary search on the answer. We need a function possible(capacity) which returns true if and only if we can do the task in D days.
