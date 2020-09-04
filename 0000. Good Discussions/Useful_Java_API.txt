@@ -1,13 +1,16 @@
 /********************* Integer *********************/
 Integer.bitCount(a)
 
+
 /********************* Character *********************/
 Character.isLetterOrDigit()
 Character.toLowerCase()
 
+
 /********************* Array *********************/
 // Initialize an array with an existing array
 int[] newArray = existedArray.clone();
+
 
 /********************* List *********************/
 // Generate a list based on the values of a HashMap:
@@ -20,10 +23,12 @@ listA.add(0, itemA);
 LinkedList<String> listA = new LinkedList<>(); // must declare listA as LinkedList not just List
 listA..addFirst(itemA);
 
+
 /********************* Set *********************/
 // Initialize a HashSet with an array
 String[] wordlist;
 Set<String> words = new HashSet<>(Arrays.asList(wordlist));
+
 
 /********************* String *********************/
 // Build String with duplicated characters
@@ -42,8 +47,13 @@ String wordDevowel = word.toLowerCase().replaceAll("[aeiou]", "#");
 // Remove character in StringBuilder at index, for example, the last index:
 sb.deleteCharAt(sb.length() - 1);
 
+// Check if a string contains another shorter string
+strA.contains(strB)
+
+
 /********************* Math *********************/
 Math.random() // returns a pseudorandom double type number whose value is in range of [0.0, 1.0)
 double degree = Math.random() * 2 * Math.PI;
 Math.cos(degree)
 Math.sin(degree)
+
