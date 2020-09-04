@@ -35,3 +35,52 @@ class Solution {
     }
 }
 
+
+/**
+ * Other's solution of Two Pointers with HashSet
+ *
+ * Algorithm
+ * 1. Start from l = length / 2;
+ * 2. check if length % l != 0 continue b/c not possiblem to divide stirng in length / l strings.
+ * 3. Cut length / l substrings and add into set.
+ * 4. Check if set size is once which means we can form string by repeasting that substring return true.
+ * 5. try for all possible l until 1.
+ * 6. return false if not already returned.
+ */
+class Solution {
+    public boolean repeatedSubstringPattern(String s) {
+        for(int l = s.length() / 2; l > 0; l--) {
+            if(s.length() % l != 0) 
+                continue;
+            Set<String> set = new HashSet();
+            for(int i = 0; i < s.length(); i += l)
+                set.add(s.substring(i, i + l));
+            if(set.size() == 1)
+                return true;
+        }
+        return false;
+    }
+}
+
+
+/**
+ * Other's solution of Two Pointers
+ */
+class Solution {
+    public boolean repeatedSubstringPattern(String s) {
+        int n = s.length();
+        for (int d = n / 2; d > 0; d--) {
+            // search the distance between two pointers d where n % d == 0 which means
+            // the left pointer index + d is the position of the right pointer index
+            // which is also the start position of one possible duplicated substring pattern.
+            // And the distance should be 1 at least, so d > 0
+            if (n % d == 0) {
+                int l = 0; // set the left pointer l to be 0, then the right pointer is l + d
+                while (l + d < n && s.charAt(l) == s.charAt(l + d))
+                    l++; // increase the left pointer
+                if (l + d == n) return true;
+            }
+        }
+        return false;
+    }
+}
