@@ -21,3 +21,22 @@ https://leetcode.com/problems/koko-eating-bananas/discuss/152324/C%2B%2BJavaPyth
 ================================================================================================================================
 (p + m - 1) / m equal to ceil(p / m)
 
+
+////////////////////////////////////////
+//  To_Avoid_Accuracy_Lost_during_Devision
+////////////////////////////////////////
+In Problem 1120. Maximum Average Subtree
+https://www.jiuzhang.com/solution/subtree-with-maximum-average/
+https://yeqiuquan.blogspot.com/2017/03/lintcode-597-subtree-with-maximum.html
+================================================================================================================================
+// When comparing the average values, should transform the division operation to multiplication operation
+// Transform the original divison like: rootResult.sum / rootResult.num > maxAverageData.sum / maxAverageData.num
+// To be multiplication like below:
+maxAverageData.num * rootResult.sum > maxAverageData.sum * rootResult.num
+
+////////////////////////////////////////
+//  
+////////////////////////////////////////
+In Problem 
+
+================================================================================================================================
