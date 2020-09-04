@@ -2,11 +2,10 @@ Medium
 
 Given the root of a binary tree, return an array of the largest value in each row of the tree **(0-indexed).**
 
- 
-
- 
 
 **Example 1:**
+
+![515_example1](https://github.com/wilwfy/LeetCode/blob/master/0515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row/515_example1.jpg)
 ```
 Input: root = [1,3,2,5,3,null,9]
 Output: [1,3,9]
