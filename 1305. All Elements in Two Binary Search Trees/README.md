@@ -8,6 +8,7 @@ Return a list containing all the integers from both trees sorted in **ascending*
 
 **Example 1:**  
 
+![1305_exp1](https://github.com/wilwfy/LeetCode/blob/master/1305.%20All%20Elements%20in%20Two%20Binary%20Search%20Trees/1305_exp1.png)
 ```
 Input: root1 = [2,1,4], root2 = [1,0,3]
 Output: [0,1,1,2,3,4]
@@ -29,6 +30,7 @@ Output: [-10,0,10]
 ```
 **Example 5:**
 
+![1305_exp5](https://github.com/wilwfy/LeetCode/blob/master/1305.%20All%20Elements%20in%20Two%20Binary%20Search%20Trees/1305_exp5.png)
 ```
 Input: root1 = [1,null,8], root2 = [8,1]
 Output: [1,1,8,8]
