@@ -6,7 +6,7 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 
 Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]
 
-
+![236_binarytree](https://github.com/wilwfy/LeetCode/blob/master/0236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/236_binarytree.png)
  
 
 **Example 1:**
