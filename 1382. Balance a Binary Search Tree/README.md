@@ -10,7 +10,7 @@ If there is more than one answer, return any of them.
 
 **Example 1:**
 
-
+![1382_ex1](https://github.com/wilwfy/LeetCode/blob/master/1382.%20Balance%20a%20Binary%20Search%20Tree/1382_ex1.png)  ![1382_ex1_out](https://github.com/wilwfy/LeetCode/blob/master/1382.%20Balance%20a%20Binary%20Search%20Tree/1382_ex1_out.png)
 ```
 Input: root = [1,null,2,null,3,null,4,null,null]
 Output: [2,1,3,null,null,null,4]
