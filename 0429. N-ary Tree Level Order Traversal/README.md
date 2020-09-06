@@ -8,14 +8,14 @@ Nary-Tree input serialization is represented in their level order traversal, eac
 
 **Example 1:**
 
-
+![429_narytree_example1](https://github.com/wilwfy/LeetCode/blob/master/0429.%20N-ary%20Tree%20Level%20Order%20Traversal/429_narytree_example1.png)
 ```
 Input: root = [1,null,3,2,4,null,5,6]
 Output: [[1],[3,2,4],[5,6]]
 ```
 **Example 2:**
 
-
+![429_narytree_example2](https://github.com/wilwfy/LeetCode/blob/master/0429.%20N-ary%20Tree%20Level%20Order%20Traversal/429_narytree_example2.png)
 ```
 Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
 Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
