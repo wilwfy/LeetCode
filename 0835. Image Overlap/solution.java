@@ -192,3 +192,100 @@ class Solution {
         return maxOverlaps;
     }
 }
+
+
+/**
+ * Other's solution of A generic and easy to understand method
+ *
+ * Time: O(N^4)
+ */
+class Solution {
+    public int largestOverlap(int[][] A, int[][] B) {
+        int rows = A.length, cols = A[0].length;
+        List<int[]> la = new ArrayList<>(), lb = new ArrayList<>(); // two lists to save pixel coordinates
+        for (int r = 0; r<rows; r++)
+            for (int c = 0; c<cols; c++){
+                if (A[r][c] == 1) la.add(new int[]{r,c}); // save the pixel coordinates
+                if (B[r][c] == 1) lb.add(new int[]{r,c});
+            }
+        Map<String, Integer> map = new HashMap<>(); // map to map the vector (from a pixel in A to a pixel in B) to its count
+        for (int[] pa : la)
+            for (int[] pb : lb) {
+                String s = (pa[0] - pb[0]) + " " + (pa[1]-pb[1]); // get the vector from a pixel in A to a pixel in B
+                map.put(s, map.getOrDefault(s, 0) + 1); // count the number of same vectors
+            }
+        int max = 0;
+        for (int count : map.values())
+            max = Math.max(max, count);
+        return max;
+    }
+}
+
+
+/**
+ * Other's solution of Straight Forward
+ *
+ * Intuition:
+ * If we do brute force, we have 2N horizontal possible sliding, 2N vertical sliding and N^2 to count overlap area.
+ * We get O(N^4) solution and it may get accepted.
+ * But we waste out time on case of sparse matrix.
+ * 
+ * 
+ * Explanation:
+ * Assume index in A and B is [0, N * N -1].
+ * 
+ * Loop on A, if value == 1, save a coordinates i / N * 100 + i % N to LA.
+ * Loop on B, if value == 1, save a coordinates i / N * 100 + i % N to LB.
+ * Loop on combination (i, j) of LA and LB, increase count[i - j] by 1.
+ * If we slide to make A[i] orverlap B[j], we can get 1 point.
+ * Loop on count and return max values.
+ * I use a 1 key hashmap. Assume ab for row and cd for col, I make it abcd as coordinate.
+ * For sure, hashmap with 2 keys will be better for understanding.
+ * 
+ * 
+ * Complexity:
+ * Assume A the number of points in the image A
+ * B the number of points in the image B,
+ * N = A.length = B.length.
+ * O(N^2) time for preparing,
+ * and O(AB) time for loop.
+ * So overall O(AB + N^2) time.
+ * Space is O(A + B).
+ *
+ * FAQ
+ * Q: why 100?
+ * 100 is big enough and very clear.
+ * For example, If I slide 13 rows and 19 cols, it will be 1319.
+ * 
+ * Q: why not 30?
+ * 30 is not big enough.
+ * For example: 409 = 13 * 30 + 19 = 14 * 30 - 11.
+ * 409 can be taken as sliding "14 rows and -11 cols" or "13 rows and 19 cols" at the same time.
+ * 
+ * Q: How big is enough?
+ * Bigger than 2N - 1.
+ * Bigger than 2N - 1.
+ * Bigger than 2N - 1.
+ * 
+ * Q: Can we replace i / N * 100 + i % N by i?
+ * No, it's wrong for simple test case [[0,1],[1,1]], [[1,1],[1,0]]
+ */
+class Solution {
+    public int largestOverlap(int[][] A, int[][] B) {
+        int N = A.length;
+        List<Integer> LA = new ArrayList<>(),  LB = new ArrayList<>();
+        HashMap<Integer, Integer> count = new HashMap<>();
+        for (int i = 0; i < N * N; ++i)
+            if (A[i / N][i % N] == 1)
+                LA.add(i / N * 100 + i % N);
+        for (int i = 0; i < N * N; ++i)
+            if (B[i / N][i % N] == 1)
+                LB.add(i / N * 100 + i % N);
+        for (int i : LA) for (int j : LB)
+                count.put(i - j, count.getOrDefault(i - j, 0) + 1);
+        int res = 0;
+        for (int i : count.values())
+            res = Math.max(res, i);
+        return res;
+    }
+}
