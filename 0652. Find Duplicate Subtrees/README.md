@@ -10,18 +10,21 @@ Two trees are **duplicate** if they have the **same structure** with the **same 
 
 **Example 1:**
 
+![652_example1](https://github.com/wilwfy/LeetCode/blob/master/0652.%20Find%20Duplicate%20Subtrees/652_example1.jpg)
 ```
 Input: root = [1,2,3,4,null,2,4,null,null,4]
 Output: [[2,4],[4]]
 ```
 **Example 2:**
 
+![652_example2](https://github.com/wilwfy/LeetCode/blob/master/0652.%20Find%20Duplicate%20Subtrees/652_example2.jpg)
 ```
 Input: root = [2,1,1]
 Output: [[1]]
 ```
 **Example 3:**
 
+![652_example3](https://github.com/wilwfy/LeetCode/blob/master/0652.%20Find%20Duplicate%20Subtrees/652_example3.jpg)
 ```
 Input: root = [2,2,2,3,null,3,null]
 Output: [[2,3],[3]]
