@@ -3,6 +3,8 @@
  *
  * This problem is a variant of the problem of Unique Binary Search Trees.
  * 
+ * F(i) = G(i-1) * G(n-i)
+ *
  * It is intuitive to solve this problem by following the same algorithm. The code
  * is in a divide-and-conquer style.
  */
