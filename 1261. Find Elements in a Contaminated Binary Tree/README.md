@@ -16,7 +16,7 @@ You need to first recover the binary tree and then implement the FindElements cl
 
 **Example 1:**
 
-
+![1261_example_1](https://github.com/wilwfy/LeetCode/blob/master/1261.%20Find%20Elements%20in%20a%20Contaminated%20Binary%20Tree/1261_example_1.jpg)
 ```
 Input
 ["FindElements","find","find"]
@@ -30,7 +30,7 @@ findElements.find(2); // return True
 ```
 **Example 2:**
 
-
+![1261_example_2](https://github.com/wilwfy/LeetCode/blob/master/1261.%20Find%20Elements%20in%20a%20Contaminated%20Binary%20Tree/1261_example_2.jpg)
 ```
 Input
 ["FindElements","find","find","find"]
@@ -45,7 +45,7 @@ findElements.find(5); // return False
 ```
 **Example 3:**
 
-
+![1261_example_3](https://github.com/wilwfy/LeetCode/blob/master/1261.%20Find%20Elements%20in%20a%20Contaminated%20Binary%20Tree/1261_example_3.jpg)
 ```
 Input
 ["FindElements","find","find","find","find"]
