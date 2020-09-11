@@ -15,9 +15,9 @@ Output: [7,4,1]
 Explanation: 
 The nodes that are a distance 2 from the target node (with value 5)
 have values 7, 4, and 1.
-
-
-
+```
+![863_example_1](https://github.com/wilwfy/LeetCode/blob/master/0863.%20All%20Nodes%20Distance%20K%20in%20Binary%20Tree/863_example_1.png)
+```
 Note that the inputs "root" and "target" are actually TreeNodes.
 The descriptions of the inputs above are just serializations of these objects.
 ```
