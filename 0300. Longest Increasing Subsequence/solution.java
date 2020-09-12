@@ -88,3 +88,126 @@ public class Solution {
         return maxans;
     }
 }
+
+
+/**
+ * Official solution of Dynamic Programming with Binary Search
+ * 
+ * Algorithm
+ * 
+ * In this approach, we scan the array from left to right. We also make use of a dp array initialized
+ * with all 0's. This dp array is meant to store the increasing subsequence formed by including the
+ * currently encountered element. While traversing the nums array, we keep on filling the dp array with
+ * the elements encountered so far. For the element corresponding to the j^{th} index (nums[j]), we determine
+ * its correct position in the dp array(say i^{th} index) by making use of Binary Search(which can be used
+ * since the dp array is storing increasing subsequence) and also insert it at the correct position. An
+ * important point to be noted is that for Binary Search, we consider only that portion of the dp array in
+ * which we have made the updates by inserting some elements at their correct positions(which remains always
+ * sorted). Thus, only the elements upto the i^{th} index in the dp array can determine the position of the
+ * current element in it. Since, the element enters its correct position(i) in an ascending order in the dp
+ * array, the subsequence formed so far in it is surely an increasing subsequence. Whenever this position
+ * index i becomes equal to the length of the LIS formed so far(len), it means, we need to update the len
+ * as len = len + 1.
+ * 
+ * Note: dp array does not result in longest increasing subsequence, but length of dp array will give you
+ * length of LIS.
+ * 
+ * Consider the example:
+ * 
+ * input: [0, 8, 4, 12, 2]
+ * 
+ * dp: [0]
+ * 
+ * dp: [0, 8]
+ * 
+ * dp: [0, 4]
+ * 
+ * dp: [0, 4, 12]
+ * 
+ * dp: [0 , 2, 12] which is not the longest increasing subsequence, but length of dp array results in length
+ * of Longest Increasing Subsequence.
+ *
+ * Note: Arrays.binarySearch() method returns index of the search key, if it is contained in the array,
+ * else it returns (-(insertion point) - 1). The insertion point is the point at which the key would be
+ * inserted into the array: the index of the first element greater than the key, or a.length if all
+ * elements in the array are less than the specified key.
+ * 
+ * Time complexity : O(nlogn). Binary search takes logn time and it is called n times.
+ * Space complexity : O(n). dp array of size n is used.
+ */
+public class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int[] dp = new int[nums.length];
+        int len = 0;
+        for (int num : nums) {
+            int i = Arrays.binarySearch(dp, 0, len, num);
+            if (i < 0) {
+                i = -(i + 1);
+            }
+            dp[i] = num;
+            if (i == len) {
+                len++;
+            }
+        }
+        return len;
+    }
+}
+
+
+/**
+ * Other's solution of Patience sorting
+ *
+ *   https://www.cs.princeton.edu/courses/archive/spring13/cos423/lectures/LongestIncreasingSubsequence.pdf
+ * Algorithm
+ *
+ * tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i].
+ * For example, say we have nums = [4,5,6,3], then all the available increasing subsequences are:
+ * 
+ * len = 1   :      [4], [5], [6], [3]   => tails[0] = 3
+ * len = 2   :      [4, 5], [5, 6]       => tails[1] = 5
+ * len = 3   :      [4, 5, 6]            => tails[2] = 6
+ * We can easily prove that tails is a increasing array. Therefore it is possible to do a binary search in
+ * tails array to find the one needs update.
+ * 
+ * Each time we only do one of the two:
+ * 
+ * (1) if x is larger than all tails, append it, increase the size by 1
+ * (2) if tails[i-1] < x <= tails[i], update tails[i]
+ * Doing so will maintain the tails invariant. The the final answer is just the size.
+ */
+public class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int[] tails = new int[nums.length];
+        int size = 0;
+        for (int x : nums) {
+            int i = 0, j = size;
+            while (i != j) {
+                int m = (i + j) / 2;
+                if (tails[m] < x)
+                    i = m + 1;
+                else
+                    j = m;
+            }
+            tails[i] = x;
+            if (i == size) ++size;
+        }
+        return size;
+    }
+}
+
+/* Another solution of Patience sorting */
+public class Solution {
+    public int lengthOfLIS(int[] nums) {
+        List<Integer> piles = new ArrayList<>(nums.length);
+        for (int num : nums) {
+            int pile = Collections.binarySearch(piles, num);
+            if (pile < 0) pile = ~pile;
+            if (pile == piles.size()) {
+                piles.add(num);
+            } else {
+                piles.set(pile, num);
+            }
+        }
+        return piles.size();
+    }
+}
