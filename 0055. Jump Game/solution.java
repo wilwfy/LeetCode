@@ -30,3 +30,45 @@ class Solution {
         return res;
     }
 }
+
+
+/**
+ * Other's solution of Greedy
+ *
+ * Time: O(n)
+ * Space: O(1)
+ */
+class Solution {
+    public boolean canJump(int[] nums) {
+        if ((nums == null) || (nums.length == 0)) return false;
+        if (nums.length == 1) return true;
+        
+        // work backwards from the last index. Keep track of the smallest index that
+        // can "jump" to the last index. Check whether the current index can jump to
+        // this smallest index.
+        int n = nums.length, last = n - 1;
+        for (int i = n - 2; i >= 0; i--) {
+            if (i + nums[i] >= last) last = i;
+        }
+        return last <= 0;
+    }
+}
+
+
+/**
+ * Official solution of Greedy
+ *
+ * Time: O(n)
+ * Space: O(1)
+ */
+public class Solution {
+    public boolean canJump(int[] nums) {
+        int lastPos = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (i + nums[i] >= lastPos) {
+                lastPos = i;
+            }
+        }
+        return lastPos == 0;
+    }
+}
