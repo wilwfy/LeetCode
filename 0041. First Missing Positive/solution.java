@@ -28,3 +28,39 @@ class Solution {
         return res;
     }
 }
+
+
+/**
+ * Other's solution without Sort
+ *
+ * Algorithm
+ * Put each number in its right place.
+ * 
+ * For example:
+ * When we find 5, then swap it with A[4].
+ * 
+ * At last, the first place where its number is not right, return the place + 1.
+ *
+ * Time: O(n)
+ * Space: O(1)
+ */
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int n = nums.length;
+        // Put each number in its right place.
+        for (int i = 0; i < nums.length; i++) {
+            while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+                // swap nums[i] with nums[nums[i] - 1]
+                int tmp = nums[i];
+                nums[i] = nums[nums[i] - 1];
+                nums[tmp - 1] = tmp;
+            }
+        }
+        // Find the first place where its number is not right
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i + 1)
+                return i + 1;
+        }
+        return n + 1;
+    }
+}
