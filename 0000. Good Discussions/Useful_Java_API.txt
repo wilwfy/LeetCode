@@ -1,3 +1,8 @@
+/********************* Operators *********************/
+// The operator >>> is 'zero fill right shift'.
+// If A is 00111100, then A >>> 2 will get 00001111, but A >> 2 will get 1111
+
+
 /********************* Integer *********************/
 Integer.bitCount(a)
 
