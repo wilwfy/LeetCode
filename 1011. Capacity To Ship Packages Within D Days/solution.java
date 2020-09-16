@@ -25,12 +25,12 @@ class Solution {
         }
         
         while (left < right) {
-            int mid = left + (right - left) / 2;
-            int days = 1, cur = 0;
+            int mid = left + (right - left) / 2; // mid is the load capacity of the ship
+            int days = 1, cur = 0; // Default day needed is 1, and current accumulated weight to load is cur
             for (int w: weights) {
                 if (cur + w > mid) {
-                    days++;
-                    cur = 0;
+                    days++; // Once accumulated weight + current w > ship load capacity, leave this w for next day
+                    cur = 0; // And current accumulated weight is shipped away, so reset cur to 0
                 }
                 cur += w;
             }
