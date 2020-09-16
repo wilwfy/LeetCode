@@ -5,11 +5,13 @@
 
 /********************* Integer *********************/
 Integer.bitCount(a)
+Integer.toString(num)
 
 
 /********************* Character *********************/
 Character.isLetterOrDigit()
 Character.toLowerCase()
+Character.getNumericValue('8')
 
 
 /********************* Array *********************/
