@@ -18,6 +18,12 @@ Character.getNumericValue('8')
 // Initialize an array with an existing array
 int[] newArray = existedArray.clone();
 
+// Two int[] arrays are not equal even if they have same elements
+System.out.println(
+    (new int[] { 1, 2 }).equals(new int[] { 1, 2 })
+); // prints "false"
+So DO NOT use int[] as HashMap key like: Map<int[], Integer>
+
 
 /********************* List *********************/
 // Generate a list based on the values of a HashMap:
