@@ -41,3 +41,44 @@ class Solution {
         return ((dir != 0) || (location[0] == 0 && location[1] == 0));
     }
 }
+
+
+/**
+ * Other's solution without HashMap
+ *
+ * Intuition
+ * Let chopper help explain.
+ * 
+ * Starting at the origin and face north (0,1),
+ * after one sequence of instructions,
+ * 
+ * if chopper return to the origin, he is obvious in an circle.
+ * if chopper finishes with face not towards north,
+ * it will get back to the initial status in another one or three sequences.
+ * 
+ * Explanation
+ * (x,y) is the location of chopper.
+ * d[i] is the direction he is facing.
+ * i = (i + 1) % 4 will turn right
+ * i = (i + 3) % 4 will turn left
+ * Check the final status after instructions.
+ * 
+ * 
+ * Complexity
+ * Time: O(N)
+ * Space: O(1)
+ */
+class Solution {
+    public boolean isRobotBounded(String instructions) {
+        int x = 0, y = 0, idx = 0, dirs[][] = {{0, 1}, {1, 0}, {0, -1}, { -1, 0}};
+        for (int j = 0; j < instructions.length(); ++j)
+            if (instructions.charAt(j) == 'R')
+                idx = (idx + 1) % 4;
+            else if (instructions.charAt(j) == 'L')
+                idx = (idx + 3) % 4;
+            else {
+                x += dirs[idx][0]; y += dirs[idx][1];
+            }
+        return x == 0 && y == 0 || idx > 0;
+    }
+}
