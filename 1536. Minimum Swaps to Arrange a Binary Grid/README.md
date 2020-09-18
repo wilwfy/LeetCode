@@ -12,12 +12,14 @@ The main diagonal of a grid is the diagonal that starts at cell (1, 1) and ends 
 
 **Example 1:**
 
+![1536_example_1](https://github.com/wilwfy/LeetCode/blob/master/1536.%20Minimum%20Swaps%20to%20Arrange%20a%20Binary%20Grid/1536_example_1.jpg)
 ```
 Input: grid = [[0,0,1],[1,1,0],[1,0,0]]
 Output: 3
 ```
 **Example 2:**
 
+![1536_example_2](https://github.com/wilwfy/LeetCode/blob/master/1536.%20Minimum%20Swaps%20to%20Arrange%20a%20Binary%20Grid/1536_example_2.jpg)
 ```
 Input: grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]
 Output: -1
@@ -25,6 +27,7 @@ Explanation: All rows are similar, swaps have no effect on the grid.
 ```
 **Example 3:**
 
+![1536_example_3](https://github.com/wilwfy/LeetCode/blob/master/1536.%20Minimum%20Swaps%20to%20Arrange%20a%20Binary%20Grid/1536_example_3.jpg)
 ```
 Input: grid = [[1,0,0],[1,1,0],[1,1,1]]
 Output: 0
