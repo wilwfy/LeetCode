@@ -1,4 +1,100 @@
 /**
+ * Other's solution without Sort
+ *
+ * Explanation
+ *
+ * 1. count letter appearance and store in charCnt[i]
+ * 2. find the letter with largest occurence.
+ * 3. put the letter into even index numbe (0, 2, 4 ...) char array
+ * 4. put the rest into the array
+ *
+ * Time: O(n)
+ * Space: O(n) for result. O(1) for charCnt[].
+ */
+class Solution {
+    public String reorganizeString(String S) {
+        int[] charCnt = new int[26]; // S will consist of lowercase letters
+        for (char c: S.toCharArray())
+            charCnt[c - 'a']++;
+        
+        int maxCnt = 0, maxLetter = 0;
+        for (int i = 0; i < 26; i++) {
+            if (charCnt[i] > maxCnt) {
+                maxCnt = charCnt[i];
+                maxLetter = i;
+            }
+        }
+
+        if (maxCnt > (S.length() + 1) / 2) // if (S.length() - maxCnt < maxCnt - 1)
+            return "";
+        
+        char[] res = new char[S.length()];
+        // Firstly place the char which has max count into the res array
+        int idx = 0;
+        while (charCnt[maxLetter] > 0) {
+            res[idx] = (char) ('a' + maxLetter);
+            idx += 2;
+            charCnt[maxLetter]--;
+        }
+        // Then place other chars which have less count
+        for (int i = 0; i < 26; i++) {
+            while (charCnt[i] > 0) {
+                if (idx >= res.length) // after placing maxLetter, the idx is maybe at the tail of res
+                    idx = 1; // so move it to index 1
+                
+                res[idx] = (char) ('a' + i);
+                idx += 2;
+                charCnt[i]--;
+            }
+        }
+        return String.valueOf(res);
+    }
+}
+
+
+/**
+ * Other's solution with PriorityQueue
+ */
+class Solution {
+    public String reorganizeString(String S) {
+        // Create map of each char to its count
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : S.toCharArray()) {
+            int count = map.getOrDefault(c, 0) + 1;
+            // Impossible to form a solution
+            if (count > (S.length() + 1) / 2) return "";
+            map.put(c, count);
+        }
+        // Greedy: fetch char of max count as next char in the result.
+        // Use PriorityQueue to store pairs of (char, count) and sort by count DESC.
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[1] - a[1]);
+        for (char c : map.keySet()) {
+            pq.add(new int[] {c, map.get(c)});
+        }
+        // Build the result.
+        StringBuilder sb = new StringBuilder();
+        while (!pq.isEmpty()) {
+            int[] first = pq.poll();
+            if (sb.length() == 0 || first[0] != sb.charAt(sb.length() - 1)) {
+                sb.append((char) first[0]);
+                if (--first[1] > 0) {
+                    pq.add(first);
+                }
+            } else {
+                int[] second = pq.poll();
+                sb.append((char) second[0]);
+                if (--second[1] > 0) {
+                    pq.add(second);
+                }
+                pq.add(first);
+            }
+        }
+        return sb.toString();
+    }
+}
+
+
+/**
  * Official solution with Sort by Count
  *
  * Algorithm
