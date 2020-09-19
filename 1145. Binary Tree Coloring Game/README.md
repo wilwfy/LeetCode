@@ -14,6 +14,7 @@ You are the second player.  If it is possible to choose such a y to ensure you w
 
 **Example 1:**
 
+![1145_example_1](https://github.com/wilwfy/LeetCode/blob/master/1145.%20Binary%20Tree%20Coloring%20Game/1145_example_1.png)
 ```
 Input: root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3
 Output: true
