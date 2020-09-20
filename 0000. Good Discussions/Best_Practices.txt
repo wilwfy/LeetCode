@@ -44,6 +44,19 @@ Once there is one condition/requirement like below in the problem, then it proba
 3. To calculate the number of possible solutions -- 统计方案个数
 
 
+////////////////////////////////////////
+//  When NOT to Use Dynamic Programming
+////////////////////////////////////////
+In the cases like below, it probably should NOT use DP solution:
+1. To find all the concrete solutions not the number of solutions -- 求出所有具体的方案而不是方案个数
+   https://leetcode.com/problems/palindrome-partitioning/
+2. The input is set not sequence -- 输入的数据是一个集合而不是序列
+   https://leetcode.com/problems/longest-consecutive-sequence/
+3. The time complexity based on Brute Force is alreay polynomial -- 暴力算法的复杂度已经是多项式级别
+   a) DP is good at optimizing time complexity from exponential one to polynomial one: (2^n, n!) -> (n^2, n^3) -- 动态规划擅长于优化指数级别复杂度(2^n, n!)到多项式级别复杂度(n^2, n^3)
+   b) DP is NOT good at optimizing time complexity from n^3 to n^2 -- 不擅长优化n^3到n^2
+
+
 ================================================================================================================================
 
 
