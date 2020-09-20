@@ -34,6 +34,19 @@ https://yeqiuquan.blogspot.com/2017/03/lintcode-597-subtree-with-maximum.html
 // To be multiplication like below:
 maxAverageData.num * rootResult.sum > maxAverageData.sum * rootResult.num
 
+
+////////////////////////////////////////
+//  When to Use Dynamic Programming
+////////////////////////////////////////
+Once there is one condition/requirement like below in the problem, then it probably needs to use DP solution:
+1. To find Max/Min value -- 求最大最小值
+2. To find whether there is a possible solution (whether it is feasible) -- 判断是否可行
+3. To calculate the number of possible solutions -- 统计方案个数
+
+
+================================================================================================================================
+
+
 ////////////////////////////////////////
 //  
 ////////////////////////////////////////
