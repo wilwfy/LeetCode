@@ -53,6 +53,11 @@ Use TreeMap with its lowerKey() or floorKey() and higherKey() or ceilingKey()
 **Using HashMap to reduce Time Complexity:**  
 0560. Subarray Sum Equals K
 
+**Sort Time Stamp with TreeMap:**
+0253. Meeting Rooms II
+0731. My Calendar II
+1094. Car Pooling
+
 
 **Good discussion and explanation:**
 1. Approach the problem using the "trial and error" algorithm:  
