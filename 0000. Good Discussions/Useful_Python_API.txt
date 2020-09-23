@@ -1,0 +1,9 @@
+## Refer to solution of 0415. Add Strings
+itertools.zip_longest()
+itertools.izip_longest()
+
+ord()
+
+''.join()
+
+res[::-1]
