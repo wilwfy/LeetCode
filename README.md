@@ -58,6 +58,9 @@ Use TreeMap with its lowerKey() or floorKey() and higherKey() or ceilingKey()
 0731. My Calendar II  
 1094. Car Pooling  
 
+**Boyer-Moore Majority Vote algorithm**  
+0229. Majority Element II
+
 **Good discussion and explanation:**
 1. Approach the problem using the "trial and error" algorithm:  
 https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm
