@@ -87,3 +87,64 @@ class Solution {
         return ans;
     }
 }
+
+
+/**
+ * Other's solution of Binary Search with Stack
+ *
+ * Intuition:
+ * Keep a decreasing stack.
+ * For each number,
+ * binary search the first smaller number in the stack.
+ * 
+ * When the number is smaller the the last,
+ * push it into the stack.
+ * 
+ * Time Complexity: O(NlogN)
+ */
+class Solution {
+    public int maxWidthRamp(int[] A) {
+        // stack of ascending index with which the array element values are descending
+        List<Integer> stack = new ArrayList<>();
+        int res = 0, n = A.length;
+        for (int i = 0; i < n; i++) {
+            if (stack.size() == 0 || A[i] < A[stack.get(stack.size() - 1)]) {
+                stack.add(i); // add index into stack when it can keep the descending element value
+            } else { // otherwise search the previous minimum index with which the element value is smaller than current element
+                int left = 0, right = stack.size() - 1, mid = 0;
+                while (left < right) {
+                    mid = left + (right - left) / 2;
+                    if (A[stack.get(mid)] > A[i]) {
+                        left = mid + 1;
+                    } else {
+                        right = mid; // index in the stack is ascending
+                    }
+                }
+                res = Math.max(res, i - stack.get(left));
+            }
+        }
+        return res;
+    }
+}
+
+
+/**
+ * Other's optimized solution of Binary Search with Stack
+ *
+ * Still one pass and keep a decraesing stack.
+ * 
+ * Time Complexity: O(N)
+ */
+class Solution {
+    public int maxWidthRamp(int[] A) {
+        Stack<Integer> s = new Stack<>();
+        int res = 0, n = A.length;
+        for (int i = 0; i < n; ++i)
+            if (s.empty() || A[s.peek()] > A[i])
+                s.add(i);
+        for (int i = n - 1; i > res; --i)
+            while (!s.empty() && A[s.peek()] <= A[i])
+                res = Math.max(res, i - s.pop());
+        return res;
+    }
+}
