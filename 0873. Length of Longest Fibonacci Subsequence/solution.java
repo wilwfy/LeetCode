@@ -25,21 +25,29 @@
  */
 class Solution {
     public int lenLongestFibSubseq(int[] A) {
-        Set<Integer> set = new HashSet<Integer>();
-        for (int x: A) set.add(x);
-        int res = 2;
-        for (int i = 0; i < A.length; ++i) {
-            for (int j = i + 1; j < A.length; ++j) {
-                int a = A[i], b = A[j], len = 2;
-                while (set.contains(a + b)) {
-                    b = a + b;
-                    a = b - a; // now a is previous b
-                    len++;
+        int N = A.length;
+        Set<Integer> S = new HashSet();
+        for (int x: A) S.add(x);
+
+        int ans = 0;
+        for (int i = 0; i < N; ++i)
+            for (int j = i+1; j < N; ++j) {
+                /* With the starting pair (A[i], A[j]),
+                 * y represents the future expected value in
+                 * the fibonacci subsequence, and x represents
+                 * the most current value found. */
+                int x = A[j], y = A[i] + A[j];
+                int length = 2;
+                while (S.contains(y)) {
+                    // x, y -> y, x+y
+                    int tmp = y;
+                    y += x;
+                    x = tmp;
+                    ans = Math.max(ans, ++length);
                 }
-                res = Math.max(res, len);
             }
-        }
-        return res > 2 ? res : 0;
+
+        return ans >= 3 ? ans : 0;
     }
 }
 
@@ -91,5 +99,76 @@ class Solution {
             }
 
         return ans >= 3 ? ans : 0;
+    }
+}
+
+
+/**
+ * Other's solution of Brute Force with HashSet
+ *
+ * Save array A to a hash set s.
+ * Start from base (A[i], A[j]) as the first two element in the sequence,
+ * we try to find the Fibonacci like subsequence as long as possible,
+ * 
+ * Initial (a, b) = (A[i], A[j])
+ * While the set s contains a + b, we update (a, b) = (b, a + b).
+ * In the end we update the longest length we find.
+ * 
+ * Time Complexity:
+ * O(N^2logM), where M is the max(A).
+ * 
+ * Quote from @renato4:
+ * Just clarifying a little bit more.
+ * Since the values grow exponentially,
+ * the amount of numbers needed to accommodate a sequence
+ * that ends in a number M is at most log(M).
+ */
+class Solution {
+    public int lenLongestFibSubseq(int[] A) {
+        Set<Integer> set = new HashSet<Integer>();
+        for (int x: A) set.add(x);
+        int res = 2;
+        for (int i = 0; i < A.length; ++i) {
+            for (int j = i + 1; j < A.length; ++j) {
+                int a = A[i], b = A[j], len = 2;
+                while (set.contains(a + b)) {
+                    b = a + b;
+                    a = b - a; // now a is previous b
+                    len++;
+                }
+                res = Math.max(res, len);
+            }
+        }
+        return res > 2 ? res : 0;
+    }
+}
+
+
+/**
+ * Other's solution of Dynamic Programming
+ *
+ * Another solution is kind of dp.
+ * dp[a, b] represents the length of fibo sequence ends up with (a, b)
+ * Then we have dp[a, b] = (dp[b - a, a] + 1 ) or 2
+ * The complexity reduce to O(N^2).
+ * In C++/Java, I use 2D dp and index as key.
+ * In Python, I use value as key.
+ * 
+ * Time Complexity: O(N^2)
+ */
+class Solution {
+    public int lenLongestFibSubseq(int[] A) {
+        int res = 0;
+        int[][] dp = new int[A.length][A.length];
+        Map<Integer, Integer> indexMap = new HashMap<>();
+        for (int j = 0; j < A.length; j++) {
+            indexMap.put(A[j], j); // key -> A[index], value -> index
+            for (int i = 0; i < j; i++) {
+                int k = indexMap.getOrDefault(A[j] - A[i], -1);
+                dp[i][j] = (A[j] - A[i] < A[i] && k >= 0) ? dp[k][i] + 1 : 2;
+                res = Math.max(res, dp[i][j]);
+            }
+        }
+        return res > 2 ? res : 0;
     }
 }
