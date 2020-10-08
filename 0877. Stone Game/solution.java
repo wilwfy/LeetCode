@@ -125,8 +125,8 @@ class Solution {
         int n = piles.length;
         int[][] dp = new int[n][n];
         for (int i = 0; i < n; i++) dp[i][i] = piles[i];
-        for (int d = 1; d < n; d++)
-            for (int i = 0; i < n - d; i++)
+        for (int d = 1; d < n; d++) // the length (distance) of the subarray
+            for (int i = 0; i < n - d; i++) // left bound of the subarray
                 dp[i][i + d] = Math.max(piles[i] - dp[i + 1][i + d], piles[i + d] - dp[i][i + d - 1]);
         return dp[0][n - 1] > 0;
     }
@@ -135,12 +135,17 @@ class Solution {
 
 /**
  * Other's solution of 1D DP
+ *
+ * Another view by trying to reducing space:
+ * if you see the 2d dp version dp[i][j] = max(piles[i] - dp[i + 1][j], piles[j] - dp[i][j - 1]), the second dimension j can be reduced.
+ * Why? If we only look at the second dimension: dp[...][j] only uses dp[...][j] and dp[...][j-1], which means we can reduce it by using previous dp[...] results.
+ * So dp[i][j] can be written as dp[i], dp[i-1][j] can be dp[i-1]. It's a common trick to compress dp space.
  */
 class Solution {
     public boolean stoneGame(int[] piles) {
         int[] dp = Arrays.copyOf(piles, piles.length);;
-        for (int d = 1; d < piles.length; d++)
-            for (int i = 0; i < piles.length - d; i++)
+        for (int d = 1; d < piles.length; d++) // the length (distance) of the subarray
+            for (int i = 0; i < piles.length - d; i++) // left bound of the subarray
                 dp[i] = Math.max(piles[i] - dp[i + 1], piles[i + d] - dp[i]);
         return dp[0] > 0;
     }
