@@ -75,6 +75,17 @@ Iterator.remove() is safe, you can use it like this:
         }
     }
 
+
+////////////////////////////////////////
+//  How to Reduce DP Space from 2D to 1D
+////////////////////////////////////////
+In Problem 0877. Stone Game:
+Another view by trying to reducing space:
+if you see the 2d dp version dp[i][j] = max(piles[i] - dp[i + 1][j], piles[j] - dp[i][j - 1]), the second dimension j can be reduced.
+Why? If we only look at the second dimension: dp[...][j] only uses dp[...][j] and dp[...][j-1], which means we can reduce it by using previous dp[...] results.
+So dp[i][j] can be written as dp[i], dp[i-1][j] can be dp[i-1]. It's a common trick to compress dp space.
+
+
 ================================================================================================================================
 
 
