@@ -1,38 +1,42 @@
-/**
- * My solution of One Pass with HashMap
- *
- * Time: O(N)
- * Space: O(1). Constant space for array letterCnt and hashmap map (whose size will not exceed 2)
- */
-class Solution {
-    public boolean buddyStrings(String A, String B) {
-        if (A.length() != B.length()) return false;
-        if (A.length() < 2) return false;
-        int[] letterCnt = new int[26];
-        int maxCnt = 0;
-        int diffCnt = 0;
-        Map<Character, Character> map = new HashMap<>();
-        for (int i = 0; i < A.length(); i++) {
-            char c1 = A.charAt(i);
-            letterCnt[c1 - 'a']++;
-            maxCnt = Math.max(maxCnt, letterCnt[c1 - 'a']);
-            
-            char c2 = B.charAt(i);
-            if (c1 != c2) {
-                diffCnt++;
-                if (diffCnt > 2) return false;
-                if (!map.isEmpty()) {
-                    // make sure A and B are equal after the swapping in case like:
-                    // A -- "abcaa", B -- "abcbb"
-                    if (!map.containsKey(c2) || map.get(c2) != c1)
-                        return false;
-                }
-                map.put(c1, c2);
-            }
-        }
-        if (diffCnt == 2) return true;
-        if (diffCnt == 1) return false;
-        // If A equals to B, then check if there is a letter whose count is no less than 2.
-        return (maxCnt >= 2) ? true : false;
-    }
-}
+Easy
+
+Given two strings A and B of lowercase letters, return true if you can swap two letters in A so the result is equal to B, otherwise, return false.
+
+Swapping letters is defined as taking two indices i and j (0-indexed) such that i != j and swapping the characters at A[i] and A[j]. For example, swapping at indices 0 and 2 in "abcd" results in "cbad".
+
+ 
+
+**Example 1:**
+```
+Input: A = "ab", B = "ba"
+Output: true
+Explanation: You can swap A[0] = 'a' and A[1] = 'b' to get "ba", which is equal to B.
+```
+**Example 2:**
+```
+Input: A = "ab", B = "ab"
+Output: false
+Explanation: The only letters you can swap are A[0] = 'a' and A[1] = 'b', which results in "ba" != B.
+```
+**Example 3:**
+```
+Input: A = "aa", B = "aa"
+Output: true
+Explanation: You can swap A[0] = 'a' and A[1] = 'a' to get "aa", which is equal to B.
+```
+**Example 4:**
+```
+Input: A = "aaaaaaabc", B = "aaaaaaacb"
+Output: true
+```
+**Example 5:**
+```
+Input: A = "", B = "aa"
+Output: false
+```
+
+**Constraints:**
+
+- 0 <= A.length <= 20000
+- 0 <= B.length <= 20000
+- A and B consist of lowercase letters.
