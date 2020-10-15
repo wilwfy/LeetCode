@@ -1,3 +1,7 @@
+/********************* System *********************/
+System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+
+
 /********************* Operators *********************/
 // The operator >>> is 'zero fill right shift'.
 // If A is 00111100, then A >>> 2 will get 00001111, but A >> 2 will get 1111
