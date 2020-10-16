@@ -42,6 +42,9 @@ public class Solution {
 /*
  * Official solution by using Cyclic Replacements
  *
+ * the intuition and algorithm are shown in the picture below:
+ *   https://github.com/wilwfy/LeetCode/blob/master/0189.%20Rotate%20Array/189_solution-Cyclic_Replacements.PNG
+ *
  * Time complexity : O(n). Only one pass is used.
  * Space complexity : O(1). Constant extra space is used.
  */
