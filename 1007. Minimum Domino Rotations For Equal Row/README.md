@@ -12,12 +12,14 @@ If it cannot be done, return -1.
 
 **Example 1:**
 
+![1007_domino_example-1](https://github.com/wilwfy/LeetCode/blob/master/1007.%20Minimum%20Domino%20Rotations%20For%20Equal%20Row/1007_domino_example-1.png)
 ```
 Input: A = [2,1,2,4,2,2], B = [5,2,6,2,3,2]
 Output: 2
 Explanation: 
 The first figure represents the dominoes as given by A and B: before we do any rotations.
-If we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated by the second figure.
+If we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated
+by the second figure.
 ```
 **Example 2:**
 ```
