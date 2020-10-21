@@ -23,6 +23,7 @@ The given node will always be the first node with val = 1. You must return the *
 
 **Example 1:**
 
+![133_graph_example-1](https://github.com/wilwfy/LeetCode/blob/master/0133.%20Clone%20Graph/133_graph_example-1.png)
 ```
 Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: [[2,4],[1,3],[2,4],[1,3]]
@@ -34,6 +35,7 @@ Explanation: There are 4 nodes in the graph.
 ```
 **Example 2:**
 
+![133_graph_example-2](https://github.com/wilwfy/LeetCode/blob/master/0133.%20Clone%20Graph/133_graph_example-2.png)
 ```
 Input: adjList = [[]]
 Output: [[]]
@@ -48,6 +50,7 @@ Explanation: This an empty graph, it does not have any nodes.
 ```
 **Example 4:**
 
+![133_graph_example-4](https://github.com/wilwfy/LeetCode/blob/master/0133.%20Clone%20Graph/133_graph_example-4.png)
 ```
 Input: adjList = [[2],[1]]
 Output: [[2],[1]]
