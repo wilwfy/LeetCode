@@ -36,3 +36,24 @@ class Solution {
         return Math.min(1.0, cups[query_row][query_glass]);
     }
 }
+
+
+/**
+ * Other's solution of 1D DP
+ *
+ * Time: O(R^2)
+ * Space: O(R), where R = query_row
+ */
+class Solution {
+    public double champagneTower(int poured, int query_row, int query_glass) {
+        double[] res = new double[query_row + 2]; // calculation needs cup at column index query_row + 1
+        res[0] = poured;
+        for (int row = 1; row <= query_row; row++) {
+            for (int col = row; col >= 0; col--) {
+                res[col] = Math.max(0.0, (res[col] - 1) / 2);
+                res[col + 1] += res[col];
+            }
+        }
+        return Math.min(1.0, res[query_glass]);
+    }
+}
