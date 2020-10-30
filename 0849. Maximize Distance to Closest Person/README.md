@@ -12,6 +12,7 @@ Return that maximum distance to the closest person.
 
 **Example 1:**
 
+![849_example-1](https://github.com/wilwfy/LeetCode/blob/master/0849.%20Maximize%20Distance%20to%20Closest%20Person/849_example-1.jpg)
 ```
 Input: seats = [1,0,0,0,1,0,1]
 Output: 2
