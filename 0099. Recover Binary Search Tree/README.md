@@ -8,6 +8,7 @@ You are given the root of a binary search tree (BST), where exactly two nodes of
 
 **Example 1:**
 
+![99_example_1](https://github.com/wilwfy/LeetCode/blob/master/0099.%20Recover%20Binary%20Search%20Tree/99_example_1.jpg)
 ```
 Input: root = [1,3,null,null,2]
 Output: [3,1,null,null,2]
@@ -15,6 +16,7 @@ Explanation: 3 cannot be a left child of 1 because 3 > 1. Swapping 1 and 3 makes
 ```
 **Example 2:**
 
+![99_example_2](https://github.com/wilwfy/LeetCode/blob/master/0099.%20Recover%20Binary%20Search%20Tree/99_example_2.jpg)
 ```
 Input: root = [3,1,4,null,null,2]
 Output: [2,1,4,null,null,3]
