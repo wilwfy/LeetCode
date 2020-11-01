@@ -63,6 +63,76 @@ class Solution {
 }
 
 
+/**
+ * Other's solution of Morris Traversal
+ *
+ * Explanation
+ *
+ * To understand this, you need to first understand Morris Traversal or Morris Threading Traversal.
+ * It take use of leaf nodes' right/left pointer to achieve O(1) space Traversal on a Binary Tree.
+ * Below is a standard Inorder Morris Traversal, referred from
+ *   http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html (a Chinese Blog, while
+ *   the graphs are great for illustration)
+ *   
+ * How to specify the first wrong node and second wrong node.
+ * 
+ * When they are not consecutive, the first time we meet pre.val > root.val ensure us the first node
+ * is the pre node, since root should be traversal ahead of pre, pre should be at least at small as
+ * root. The second time we meet pre.val > root.val ensure us the second node is the root node, since
+ * we are now looking for a node to replace with out first node, which is found before.
+ * 
+ * When they are consecutive, which means the case pre.val > cur.val will appear only once. We need
+ * to take case this case without destroy the previous analysis. So the first node will still be pre,
+ * and the second will be just set to root. Once we meet this case again, the first node will not be
+ * affected.
+ *
+ * Time: O(N)
+ * Space: O(1)
+ */
+class Solution {
+    public void recoverTree(TreeNode root) {
+        TreeNode pre = null;
+        TreeNode first = null, second = null;
+        // Morris Traversal
+        TreeNode temp = null;
+        while (root != null) {
+            if (root.left != null) {
+                // connect threading for root
+                temp = root.left;
+                while (temp.right != null && temp.right != root)
+                    temp = temp.right;
+                // the threading already exists
+                if (temp.right != null) {
+                    if (pre != null && pre.val > root.val) {
+                        if (first == null) first = pre;
+                        second = root;
+                    }
+                    pre = root;
+                    temp.right = null;
+                    root = root.right;
+                } else {
+                    // construct the threading
+                    temp.right = root;
+                    root = root.left;
+                }
+            } else {
+                if (pre != null && pre.val > root.val) {
+                    if (first == null) first = pre;
+                    second = root;
+                }
+                pre = root;
+                root = root.right;
+            }
+        }
+        // swap two node values;
+        if (first != null && second != null) {
+            int t = first.val;
+            first.val = second.val;
+            second.val = t;
+        }
+    }
+}
+
 
 /**
  * Definition for a binary tree node.
