@@ -8,7 +8,7 @@ Return the maximum area of a piece of cake after you cut at each horizontal and 
 
 **Example 1:**
 
-
+![1465_max_area_1](https://github.com/wilwfy/LeetCode/blob/master/1465.%20Maximum%20Area%20of%20a%20Piece%20of%20Cake%20After%20Horizontal%20and%20Vertical%20Cuts/1465_max_area_1.png)
 ```
 Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]
 Output: 4 
@@ -18,7 +18,7 @@ cake has the maximum area.
 ```
 **Example 2:**
 
-
+![1465_max_area_2](https://github.com/wilwfy/LeetCode/blob/master/1465.%20Maximum%20Area%20of%20a%20Piece%20of%20Cake%20After%20Horizontal%20and%20Vertical%20Cuts/1465_max_area_2.png)
 ```
 Input: h = 5, w = 4, horizontalCuts = [3,1], verticalCuts = [1]
 Output: 6
