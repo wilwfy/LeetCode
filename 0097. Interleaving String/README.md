@@ -15,6 +15,7 @@ An **interleaving** of two strings `s` and `t` is a configuration where they are
 
 **Example 1:**
 
+![97_interleaving_string](https://github.com/wilwfy/LeetCode/blob/master/0097.%20Interleaving%20String/97_interleaving_string.jpg?raw=true)
 ```
 Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
 Output: true
