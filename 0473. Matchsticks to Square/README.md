@@ -8,6 +8,7 @@ Return true if you can make this square and false otherwise.
 
 **Example 1:**
 
+![473_matchsticks1-grid](https://github.com/wilwfy/LeetCode/blob/master/0473.%20Matchsticks%20to%20Square/473_matchsticks1-grid.jpg)
 ```
 Input: matchsticks = [1,1,2,2,2]
 Output: true
