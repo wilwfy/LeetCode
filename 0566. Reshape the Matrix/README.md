@@ -12,12 +12,14 @@ If the reshape operation with given parameters is possible and legal, output the
 
 **Example 1:**
 
+![566_reshape1-grid](https://github.com/wilwfy/LeetCode/blob/master/0566.%20Reshape%20the%20Matrix/566_reshape1-grid.jpg)
 ```
 Input: mat = [[1,2],[3,4]], r = 1, c = 4
 Output: [[1,2,3,4]]
 ```
 **Example 2:**
 
+![566_reshape2-grid](https://github.com/wilwfy/LeetCode/blob/master/0566.%20Reshape%20the%20Matrix/566_reshape2-grid.jpg)
 ```
 Input: mat = [[1,2],[3,4]], r = 2, c = 4
 Output: [[1,2],[3,4]]
