@@ -25,6 +25,7 @@ Explanation: The first domino expends no additional force on the second domino.
 ```
 **Example 2:**
 
+![838_domino](https://github.com/wilwfy/LeetCode/blob/master/0838.%20Push%20Dominoes/838_domino.png)
 ```
 Input: dominoes = ".L.R...LR..L.."
 Output: "LL.RR.LLRRLL.."
