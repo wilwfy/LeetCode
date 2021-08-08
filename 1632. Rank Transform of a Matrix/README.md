@@ -16,6 +16,7 @@ It is guaranteed that answer is unique under the given rules.
 
 **Example 1:**
 
+![1632-example1](https://github.com/wilwfy/LeetCode/blob/master/1632.%20Rank%20Transform%20of%20a%20Matrix/1632-example1.jpg)
 ```
 Input: matrix = [[1,2],[3,4]]
 Output: [[1,2],[2,3]]
@@ -28,18 +29,21 @@ matrix[0][1] and matrix[1][0] are rank 2.
 ```
 **Example 2:**
 
+![1632-example2](https://github.com/wilwfy/LeetCode/blob/master/1632.%20Rank%20Transform%20of%20a%20Matrix/1632-example2.jpg)
 ```
 Input: matrix = [[7,7],[7,7]]
 Output: [[1,1],[1,1]]
 ```
 **Example 3:**
 
+![1632-example3](https://github.com/wilwfy/LeetCode/blob/master/1632.%20Rank%20Transform%20of%20a%20Matrix/1632-example3.jpg)
 ```
 Input: matrix = [[20,-21,14],[-19,4,19],[22,-47,24],[-19,4,19]]
 Output: [[4,2,3],[1,3,4],[5,1,6],[1,3,4]]
 ```
 **Example 4:**
 
+![1632-example4](https://github.com/wilwfy/LeetCode/blob/master/1632.%20Rank%20Transform%20of%20a%20Matrix/1632-example4.jpg)
 ```
 Input: matrix = [[7,3,6],[1,4,5],[9,8,2]]
 Output: [[5,1,4],[1,2,3],[6,3,1]]
