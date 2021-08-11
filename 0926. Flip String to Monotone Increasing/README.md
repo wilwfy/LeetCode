@@ -1,4 +1,4 @@
-**Medium***
+**Medium**
 
 A binary string is monotone increasing if it consists of some number of 0's (possibly none), followed by some number of 1's (also possibly none).
 
