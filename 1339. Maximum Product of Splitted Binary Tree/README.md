@@ -10,6 +10,7 @@ Return the maximum product of the sums of the two subtrees. Since the answer may
 
 **Example 1:**
 
+![1339_sample_1](https://github.com/wilwfy/LeetCode/blob/master/1339.%20Maximum%20Product%20of%20Splitted%20Binary%20Tree/1339_sample_1.png)
 ```
 Input: root = [1,2,3,4,5,6]
 Output: 110
@@ -17,6 +18,7 @@ Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Thei
 ```
 **Example 2:**
 
+![1339_sample_2](https://github.com/wilwfy/LeetCode/blob/master/1339.%20Maximum%20Product%20of%20Splitted%20Binary%20Tree/1339_sample_2.png)
 ```
 Input: root = [1,null,2,3,4,null,null,5,6]
 Output: 90
