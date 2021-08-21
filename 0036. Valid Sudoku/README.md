@@ -14,6 +14,7 @@ Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be val
 
 **Example 1:**
 
+![36-Sudoku](https://github.com/wilwfy/LeetCode/blob/master/0036.%20Valid%20Sudoku/36-Sudoku.png)
 ```
 Input: board = 
 [["5","3",".",".","7",".",".",".","."]
