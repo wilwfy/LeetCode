@@ -13,6 +13,7 @@ The `'.'` character indicates empty cells.
 
 **Example 1:**
 
+![37-Sudoku-1](https://github.com/wilwfy/LeetCode/blob/master/0037.%20Sudoku%20Solver/37-Sudoku-1.png)
 ```
 Input: board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],
 [".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],
@@ -26,7 +27,7 @@ Output: [["5","3","4","6","7","8","9","1","2"],["6","7","2","1","9","5","3","4",
 ["3","4","5","2","8","6","1","7","9"]]
 Explanation: The input board is shown above and the only valid solution is shown below:
 ```
-
+![37-Sudoku-2](https://github.com/wilwfy/LeetCode/blob/master/0037.%20Sudoku%20Solver/37-Sudoku-2.png)
  
 
 **Constraints:**
