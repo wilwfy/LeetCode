@@ -8,6 +8,7 @@ Find the total area covered by all rectangles in the plane. Since the answer may
 
 **Example 1:**
 
+![850_rectangle_area_ii_pic](https://github.com/wilwfy/LeetCode/blob/master/0850.%20Rectangle%20Area%20II/850_rectangle_area_ii_pic.png)
 ```
 Input: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]
 Output: 6
