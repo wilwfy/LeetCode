@@ -6,12 +6,14 @@ Given the `root` of a Binary Search Tree and a target number `k`, return `true` 
 
 **Example 1:**
 
+![653_sum_tree_1](https://github.com/wilwfy/LeetCode/blob/master/0653.%20Two%20Sum%20IV%20-%20Input%20is%20a%20BST/653_sum_tree_1.jpg)
 ```
 Input: root = [5,3,6,2,4,null,7], k = 9
 Output: true
 ```
 **Example 2:**
 
+![653_sum_tree_2](https://github.com/wilwfy/LeetCode/blob/master/0653.%20Two%20Sum%20IV%20-%20Input%20is%20a%20BST/653_sum_tree_2.jpg)
 ```
 Input: root = [5,3,6,2,4,null,7], k = 28
 Output: false
