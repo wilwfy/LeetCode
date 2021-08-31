@@ -8,6 +8,7 @@ Count and return the number of maximum integers in the matrix after performing a
 
 **Example 1:**
 
+![598_example1](https://github.com/wilwfy/LeetCode/blob/master/0598.%20Range%20Addition%20II/598_example1.jpg)
 ```
 Input: m = 3, n = 3, ops = [[2,2],[3,3]]
 Output: 4
