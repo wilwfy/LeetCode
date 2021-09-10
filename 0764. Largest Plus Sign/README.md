@@ -10,6 +10,7 @@ An **axis-aligned plus sign** of 1's of order k has some center grid[r][c] == 1 
 
 **Example 1:**
 
+![764_plus1-grid](https://github.com/wilwfy/LeetCode/blob/master/0764.%20Largest%20Plus%20Sign/764_plus1-grid.jpg)
 ```
 Input: n = 5, mines = [[4,2]]
 Output: 2
@@ -17,6 +18,7 @@ Explanation: In the above grid, the largest plus sign can only be of order 2. On
 ```
 **Example 2:**
 
+![764_plus2-grid](https://github.com/wilwfy/LeetCode/blob/master/0764.%20Largest%20Plus%20Sign/764_plus2-grid.jpg)
 ```
 Input: n = 1, mines = [[0,0]]
 Output: 0
