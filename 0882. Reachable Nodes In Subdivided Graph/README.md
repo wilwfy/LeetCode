@@ -14,6 +14,7 @@ Given the original graph and maxMoves, return the number of nodes that are **rea
 
 **Example 1:**
 
+![882_origfinal](https://github.com/wilwfy/LeetCode/blob/master/0882.%20Reachable%20Nodes%20In%20Subdivided%20Graph/882_origfinal.png)
 ```
 Input: edges = [[0,1,10],[0,2,1],[1,2,2]], maxMoves = 6, n = 3
 Output: 13
