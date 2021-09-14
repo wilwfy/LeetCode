@@ -8,14 +8,14 @@ You can use each character in text **at most once**. Return the maximum number o
 
 **Example 1:**
 
-
+![1189_ex1](https://github.com/wilwfy/LeetCode/blob/master/1189.%20Maximum%20Number%20of%20Balloons/1189_ex1.jfif)
 ```
 Input: text = "nlaebolko"
 Output: 1
 ```
 **Example 2:**
 
-
+![1189_ex2](https://github.com/wilwfy/LeetCode/blob/master/1189.%20Maximum%20Number%20of%20Balloons/1189_ex2.jfif)
 ```
 Input: text = "loonbalxballpoon"
 Output: 2
