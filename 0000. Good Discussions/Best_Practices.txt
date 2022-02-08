@@ -1,7 +1,7 @@
 ////////////////////////////////////////
 //  To_Avoid_Overflow
 ////////////////////////////////////////
-In Problem 0278. First Bad Version
+1) In Problem 0278. First Bad Version
 https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow
 ================================================================================================================================
 Before this problem, I have always use
@@ -11,6 +11,20 @@ when start and end are all about INT_MAX , then (start+end) of course will be ov
 
 To avoid the problem we can use
     mid = start + (end - start)/2;
+    
+    
+2) In Problem 2164. Sort Even and Odd Indices Independently
+https://leetcode.com/problems/sort-even-and-odd-indices-independently/
+================================================================================================================================
+For the comparator in PriorityQueue,
+the lambda approach is like:
+        PriorityQueue<Integer> even = new PriorityQueue<>((a, b)->(a - b));
+        PriorityQueue<Integer> odd = new PriorityQueue<>((a, b)->(b - a));
+
+But the Comparator for the even can be left empty and for odd Comparator.reverseOrder() or Collections.reverseOrder() can be used.
+Tips for interviews:
+a - b is prone to overflow. Instead, Integer.compare(a, b) should be used.
+Also don't change the content of the input data. But I didn't want to write an extra line.
 
 
 ////////////////////////////////////////
