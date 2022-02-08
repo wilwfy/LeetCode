@@ -13,6 +13,11 @@ Integer.toString(num)
 Integer.parseInt(str) // convert a number string to an integer
 
 
+/********************* Long *********************/
+String str = Stream.of(Long.toString(Math.abs(num)).split("")).sorted().collect(Collectors.joining());
+Long.parseLong(sb.reverse().toString())
+
+
 /********************* Character *********************/
 Character.isLetterOrDigit()
 Character.toLowerCase()
