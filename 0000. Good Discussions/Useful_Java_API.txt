@@ -79,4 +79,4 @@ Math.random() // returns a pseudorandom double type number whose value is in ran
 double degree = Math.random() * 2 * Math.PI;
 Math.cos(degree)
 Math.sin(degree)
-
+java.math.BigInteger.valueOf(x).gcd(java.math.BigInteger.valueOf(k))  // Get a BigInteger whose value is the Greatest Common Divisor of abs(x) and abs(k)
